@@ -1,0 +1,32 @@
+[
+  {
+    "id": "real-food-health",
+    "path": "/images/real/food-health.jpg",
+    "alt": "Food and Health realistic photo"
+  },
+  {
+    "id": "real-environment",
+    "path": "/images/real/environment.jpg",
+    "alt": "Environment and Sustainability realistic photo"
+  },
+  {
+    "id": "real-technology",
+    "path": "/images/real/technology.jpg",
+    "alt": "Technology and Innovation realistic photo"
+  },
+  {
+    "id": "real-education",
+    "path": "/images/real/education.jpg",
+    "alt": "Education and Learning realistic photo"
+  },
+  {
+    "id": "real-work-career",
+    "path": "/images/real/work-career.jpg",
+    "alt": "Work and Career realistic photo"
+  },
+  {
+    "id": "real-canada-migration",
+    "path": "/images/real/canada-migration.jpg",
+    "alt": "Canada and Migration realistic photo"
+  }
+]

@@ -1,0 +1,735 @@
+{
+  "meta": {
+    "title": "KAM Migration Prep",
+    "description": "Study, work, and English preparation for migration — resumes, CLB9 path, and send targets in one place."
+  },
+  "nav": {
+    "brand": "KAM Migration Prep",
+    "dashboard": "Dashboard",
+    "hub": "Overview",
+    "workResumes": "Job resumes",
+    "studyResumes": "Academic CV",
+    "languageLearning": "Language",
+    "security": "Security",
+    "language": "Language",
+    "resume": "Resume",
+    "targets": "Targets",
+    "admin": "Admin",
+    "signIn": "Sign in",
+    "profile": "Profile",
+    "signOut": "Sign out",
+    "creditsPrefix": "Credits:",
+    "requestCreditsSummary": "Request more credits",
+    "requestCreditsTitle": "Request credit increase",
+    "requestCreditsHelp": "New resumes, file exports, and new lesson days each use credits from your balance.",
+    "amount": "Amount",
+    "message": "Message",
+    "messagePlaceholder": "Why do you need more credits?",
+    "sendRequest": "Send request"
+  },
+  "dashboardHub": {
+    "title": "Choose your workspace",
+    "subtitle": "Job applications, university admissions, and CLB9 English each have their own dashboard.",
+    "welcomeBack": "Welcome back",
+    "cardWorkTitle": "Job & migration",
+    "cardWorkDesc": "CV, cover letter, and recruiter email for each target market.",
+    "cardStudyTitle": "Academic CV",
+    "cardStudyDesc": "Research, publications, teaching, and references for admissions.",
+    "cardLangTitle": "Language & CLB9",
+    "cardLangDesc": "Daily lessons, progress, notes, and the full study plan.",
+    "open": "Open"
+  },
+  "langSwitcher": {
+    "label": "Language"
+  },
+  "profile": {
+    "backDashboard": "Dashboard",
+    "eyebrow": "Your profile",
+    "title": "Account settings",
+    "memberSince": "Member since {{date}}",
+    "saved": "Profile updated.",
+    "errorInvalid": "Please enter a valid name and email.",
+    "errorEmail": "That email is already in use.",
+    "displayName": "Display name",
+    "email": "Email",
+    "save": "Save changes",
+    "security": "Security",
+    "signOut": "Sign out"
+  },
+  "landing": {
+    "localNav": {
+      "brand": "KAM — Migration prep",
+      "pillars": "Migration paths",
+      "language": "Language & CLB9",
+      "work": "Work & resume",
+      "study": "Study",
+      "languageCta": "Language",
+      "workspace": "Workspace",
+      "signInCta": "Sign in"
+    },
+    "sectionNavAria": "On this page",
+    "hero": {
+      "badge": "One platform for three tracks: study, work, language",
+      "title": "From deciding to move to documents, English, and applications — keep everything in one flow.",
+      "subtitle": "Whether you need university admission, a work visa, or language points, build professional resumes and letters, follow the CLB9 path, and know where to send your CV.",
+      "startFree": "Start with 10 credits",
+      "haveAccount": "I have an account — Sign in",
+      "myDashboard": "My dashboard",
+      "targets": "Resume send targets"
+    },
+    "trust": {
+      "starterCredits": "{{credits}} starter credits",
+      "creditResume": "1 credit per new resume",
+      "creditExportDay": "1 credit per export or new lesson day",
+      "clb9Path": "{{days}}-day CLB9 path"
+    },
+    "sidebar": {
+      "eyebrow": "Your status",
+      "progressTitle": "{{days}} language days completed",
+      "notStartedTitle": "Not started yet?",
+      "nextStep": "Next step: Day {{day}} of the language plan",
+      "hint": "Create an account to save language progress and resumes."
+    },
+    "miniRows": {
+      "languageTitle": "Language for visa & school",
+      "languageText": "CLB9, four skills, and daily notes in the same account.",
+      "workTitle": "Job application package",
+      "workText": "Resume, cover letter, and employer email with professional exports.",
+      "targetsTitle": "Country targeting",
+      "targetsText": "Employer, job board, and recruiter lists by destination."
+    },
+    "continueLanguage": "Continue language path",
+    "pillarsIntro": {
+      "eyebrow": "Three pillars",
+      "title": "Which door is your migration?",
+      "subtitle": "Content and tools sit together so you can work on admission, employment contracts, and language scores at once — without scattering files across apps."
+    },
+    "pillar": {
+      "study": {
+        "title": "Study migration",
+        "subtitle": "Admission, motivation letters, documents, and conditional language",
+        "cta": "Build profile & documents",
+        "bullets": [
+          "One coherent profile for multiple universities and countries",
+          "Formal text and exportable cover letters",
+          "Parallel English prep for IELTS / admission conditions"
+        ]
+      },
+      "work": {
+        "title": "Work migration",
+        "subtitle": "Job offer, sponsor, recruiters, and resumes for your target market",
+        "cta": "Targets & resume",
+        "bullets": [
+          "Resume and letters tailored to country and role",
+          "Send lists to employers and job boards",
+          "Professional English for interviews and visa points"
+        ]
+      },
+      "language": {
+        "title": "Language learning",
+        "subtitle": "Structured {{days}}-day path — CLB9 and skills",
+        "ctaStart": "Start language plan",
+        "ctaContinue": "Continue from day {{day}}",
+        "bullets": [
+          "Daily vocabulary, grammar, listening, reading",
+          "Saved notes for each day",
+          "Progress synced with your account"
+        ]
+      }
+    },
+    "journey": {
+      "eyebrow": "Suggested path",
+      "title": "From preparation to sending",
+      "register": "Create account",
+      "steps": [
+        { "n": "1", "title": "Base profile", "text": "Enter personal details, education, experience, and skills once." },
+        { "n": "2", "title": "Target market", "text": "Create resume and letter versions for each country or role." },
+        { "n": "3", "title": "Daily language", "text": "Move CLB9 days alongside professional work so scores and confidence stick." },
+        { "n": "4", "title": "Systematic outreach", "text": "Use destination lists to send your resume down the right path — no guessing." }
+      ]
+    },
+    "markets": {
+      "eyebrow": "Destinations",
+      "title": "Sample markets you prepare for",
+      "subtitle": "Resume tone and letter style differ for the Netherlands, Canada, or remote roles. Same structure, message tuned to each migration path.",
+      "nl": { "country": "Netherlands", "tag": "Work & study", "detail": "English use, concise CVs, and clear outreach to sponsors and universities." },
+      "ca": { "country": "Canada", "tag": "Express Entry / work", "detail": "CLB9 for points, ATS-friendly resumes, and interview readiness." },
+      "remote": { "country": "Global remote", "tag": "International contract", "detail": "Portfolio, GitHub, and short emails to distributed teams." },
+      "custom": { "country": "Custom", "tag": "Multiple versions", "detail": "From one JSON profile, several country versions without rewriting from scratch." }
+    },
+    "cta": {
+      "eyebrow": "Your next step",
+      "title": "Study, work, or language migration — start in an organized way.",
+      "subtitle": "Create an account, build your resume, move language forward daily, and align send lists with real destinations.",
+      "dashboard": "Go to dashboard",
+      "register": "Register",
+      "resumeBuilder": "Resume builder"
+    }
+  },
+  "auth": {
+    "login": {
+      "eyebrow": "Resume + Language",
+      "title": "Welcome back",
+      "subtitle": "Sign in to manage resumes, exports, and CLB9 progress.",
+      "errorInvalid": "Invalid email or password.",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "noAccount": "No account?",
+      "createOne": "Create one"
+    },
+    "register": {
+      "eyebrow": "Start your plan",
+      "title": "Create account",
+      "subtitle": "Build resumes, track language study, and prepare applications in one place.",
+      "errorExists": "This email is already registered.",
+      "errorInvalid": "Enter a name, valid email, matching 8+ character passwords.",
+      "errorBot": "Registration check failed. Please try again.",
+      "honeypotLabel": "Website",
+      "name": "Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "challenge": "Simple check: 7 + 5 =",
+      "submit": "Create account",
+      "alreadyRegistered": "Already registered?",
+      "signIn": "Sign in"
+    }
+  },
+  "security": {
+    "backDashboard": "Dashboard",
+    "eyebrow": "Account security",
+    "title": "Change password",
+    "signedInAs": "Signed in as {{email}}. Enter your current password before setting a new one.",
+    "saved": "Password changed successfully.",
+    "errorCurrent": "Current password is incorrect.",
+    "errorInvalid": "New password must be 8+ characters and match confirmation.",
+    "currentPassword": "Current password",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm new password",
+    "submit": "Change password"
+  },
+  "common": {
+    "edit": "Edit",
+    "duplicate": "Duplicate",
+    "delete": "Delete",
+    "somethingWrong": "Something went wrong.",
+    "totalCount": "{{count}} total",
+    "updated": "updated",
+    "planPercent": "{{pct}}% of plan",
+    "continueFromLast": "Continue from last stop",
+    "overallProgress": "Overall progress",
+    "noNotesYet": "No notes yet.",
+    "noExportCredits": "No export credits",
+    "defaultValue": "Default",
+    "creditRequestSent": "Credit increase request sent. An admin will review it."
+  },
+  "learning": {
+    "navBrand": "KAM Migration Prep",
+    "eyebrow": "CLB9 Learning",
+    "title": "Keep your English progress visible.",
+    "intro": "Follow the {{totalDays}}-day IELTS General path and save completion notes under your account. Unlocking each new lesson day costs {{cost}} credit; revisiting days you already opened stays free.",
+    "continueDay": "Continue Day {{day}}",
+    "noCreditsDay": "No credits to unlock Day {{day}}",
+    "creditsLabel": "Credits: {{credits}}",
+    "statTotalDays": "Total days",
+    "statCompleted": "Completed days",
+    "statNextLesson": "Next lesson",
+    "statUnlocked": "Unlocked days",
+    "billingNote": "Learning billing: {{cost}} credit unlocks each new lesson day forever; returning to days you already opened does not charge again.",
+    "recentProgress": "Recent progress",
+    "dayN": "Day {{day}}",
+    "statusCompleted": "Completed",
+    "statusInProgress": "In progress",
+    "noProgress": "No saved progress yet. Start Day {{day}}.",
+    "day": {
+      "lockedEyebrow": "Learning credits required",
+      "lockedTitle": "Day {{day}} is locked.",
+      "lockedBody": "Unlocking a new lesson day costs {{cost}} credit. Your current balance is {{credits}}. Request more credits from the top menu or ask an admin, then come back to this lesson.",
+      "learningDashboard": "Learning dashboard",
+      "userDashboard": "User dashboard",
+      "progressEyebrow": "Saved learning progress",
+      "progressTitle": "Day {{day}}",
+      "progressHint": "This section is saved to your account. When you log in later, your completed days and notes continue from here.",
+      "unlockedPaid": "Day {{day}} unlocked for {{cost}} credit. Future visits to this day are free.",
+      "unlockedFree": "Day {{day}} was opened without a credit charge. Future visits to this day are free.",
+      "saved": "Progress saved to your account.",
+      "markComplete": "Mark day complete",
+      "notes": "Notes",
+      "notesPlaceholder": "What did you learn today? Which words or skills need review?",
+      "saveProgress": "Save progress"
+    }
+  },
+  "targetsPage": {
+    "workEyebrow": "Application targets",
+    "workTitle": "Where to send your resume.",
+    "workSubtitle": "Job boards, recruiters, and companies — or switch to universities for admissions links by field of study.",
+    "uniEyebrow": "University targets",
+    "uniTitle": "Where to apply for graduate programmes.",
+    "uniSubtitle": "Admin-managed universities and schools by country and field of study (same data model as work targets).",
+    "country": "Country",
+    "fieldOfStudy": "Field of study",
+    "showTargets": "Show targets",
+    "showList": "Show list",
+    "statCountry": "Country",
+    "statTargets": "Targets",
+    "statLastUpdate": "Last update",
+    "statField": "Field",
+    "statInstitutions": "Institutions",
+    "noTargetsTitle": "No targets yet",
+    "noTargetsBody": "Ask admin to add resume targets for {{country}}.",
+    "noUniTitle": "No universities listed",
+    "noUniBody": "Ask admin to add entries for {{country}} — {{field}}.",
+    "tabWork": "Work & recruiters",
+    "tabUniversities": "Universities",
+    "website": "Website",
+    "email": "Email"
+  },
+  "workspaceJob": {
+    "headerTitle": "Job & migration resumes",
+    "headerSubtitle": "Build targeted application packages: CV, cover letter, and recruiter email exports per market.",
+    "statPackages": "Job packages",
+    "statPackagesDetail": "One credit per new package",
+    "statExports": "Exports",
+    "statExportsValue": "{{cost}} cr each",
+    "statExportsDetail": "MD, DOCX, or PDF per file",
+    "statCredits": "Credits",
+    "statCreditsDetail": "Request more from the top bar",
+    "sectionEyebrow": "Job resumes",
+    "sectionTitle": "Resume builder",
+    "sectionText": "Create a package per country or role. Exports stay structured for recruiters and ATS.",
+    "newPackage": "New package",
+    "formTitle": "New job package",
+    "formCreditHint": "Each new resume costs {{cost}} credit.",
+    "fieldTitle": "Title",
+    "fieldMarket": "Target market",
+    "createEdit": "Create and edit",
+    "noCreditsCreate": "Not enough credits to create a resume.",
+    "savedTitle": "Saved job packages",
+    "downloadHint": "Each download costs {{cost}} credit.",
+    "lowCreditsDownload": "Credit balance too low to download files.",
+    "deleted": "Package deleted.",
+    "noCreditsAnother": "Not enough credits to create another resume.",
+    "emptyTitle": "No job packages yet",
+    "emptyText": "Create your first package, then export CV, cover letter, and recruiter email.",
+    "rowMeta": "{{country}} • {{updated}} {{date}}",
+    "labels": { "cv": "CV", "cover": "Cover", "email": "Email" },
+    "checklistTitle": "Job application checklist",
+    "checklistItems": [
+      "Create country-specific package",
+      "Export PDF CV",
+      "Polish cover letter",
+      "Send recruiter email"
+    ]
+  },
+  "workspaceStudy": {
+    "headerTitle": "Academic CV",
+    "headerSubtitle": "Admissions-style CV: research, publications, teaching, tests, and references — separate from job resumes.",
+    "statDrafts": "Academic drafts",
+    "statDraftsDetail": "Same credit rules as job packages",
+    "statExports": "Exports",
+    "statExportsValue": "{{cost}} cr each",
+    "statExportsDetail": "Academic CV as MD / DOCX / PDF",
+    "statCredits": "Credits",
+    "statCreditsDetail": "Balance in top navigation",
+    "sectionEyebrow": "University admissions",
+    "sectionTitle": "Academic CV builder",
+    "sectionText": "Structured sections for committees. One export type: academic CV.",
+    "newCv": "New academic CV",
+    "formTitle": "Create academic CV",
+    "formCreditHint": "Each new document costs {{cost}} credit.",
+    "fieldTitle": "Title",
+    "fieldRegion": "Region tag",
+    "createEdit": "Create and edit",
+    "noCreditsCreate": "Not enough credits to create a CV.",
+    "savedTitle": "Saved academic CVs",
+    "lowCreditsDownload": "Credit balance too low to download files.",
+    "deleted": "CV deleted.",
+    "noCreditsAnother": "Not enough credits to create another CV.",
+    "emptyTitle": "No academic CVs yet",
+    "emptyText": "Create a CV, fill research and publications, then export.",
+    "rowMeta": "{{country}} • {{updated}} {{date}}",
+    "exportLabel": "Academic CV",
+    "checklistTitle": "Admissions checklist",
+    "checklistItems": [
+      "Fill research interests",
+      "Add publications with DOI",
+      "List teaching or TA roles",
+      "Export PDF for committee"
+    ]
+  },
+  "workspaceLanguage": {
+    "headerTitle": "Language & CLB9",
+    "headerSubtitle": "Daily lessons, notes, completion, and the full study plan — separate from resume work.",
+    "completedDays": "Completed days",
+    "nextLesson": "Next lesson",
+    "dayN": "Day {{day}}",
+    "sectionEyebrow": "CLB9 path",
+    "sectionTitle": "Language learning",
+    "sectionText": "Open the lesson runner for the next day, or browse all days from the learning index.",
+    "continueDay": "Continue day {{day}}",
+    "actionDailyTitle": "Daily lesson",
+    "actionDailyText": "Skills, quiz, and notes for one day.",
+    "actionAllTitle": "All lessons",
+    "actionAllText": "Pick any day from the language index.",
+    "recentNotes": "Recent notes",
+    "emptyNotesTitle": "No notes yet",
+    "emptyNotesText": "Start day {{day}}, mark complete, and save notes.",
+    "checklistTitle": "Language checklist",
+    "checklistItems": ["Continue next lesson", "Save day notes", "Mark day complete", "Review weak vocabulary"]
+  },
+  "editorShared": {
+    "remove": "Remove",
+    "selectPlaceholder": "Select...",
+    "skillsExamplePlaceholder": "Node.js, TypeScript, REST APIs",
+    "experience": {
+      "cardTitle": "Experience {{n}}",
+      "add": "Add experience",
+      "company": "Company",
+      "roleTitle": "Role title",
+      "location": "Location",
+      "employmentType": "Employment type",
+      "start": "Start",
+      "end": "End",
+      "technologies": "Technologies, comma-separated",
+      "achievements": "Achievements, one per line"
+    },
+    "dynamic": {
+      "addSkillGroup": "Add skill group",
+      "skillGroupTitle": "Skill group {{n}}",
+      "groupName": "Group name",
+      "skillsComma": "Skills, comma-separated",
+      "addProject": "Add project",
+      "projectTitle": "Project {{n}}",
+      "projectName": "Project name",
+      "url": "URL",
+      "yourRole": "Your role",
+      "technologiesComma": "Technologies, comma-separated",
+      "description": "Description",
+      "highlightsLines": "Highlights, one per line",
+      "addEducation": "Add education",
+      "educationTitle": "Education {{n}}",
+      "degree": "Degree",
+      "fieldOfStudy": "Field of study",
+      "school": "School",
+      "location": "Location",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "gpaAverage": "GPA / Average",
+      "gradYearOptional": "Graduation year (optional)",
+      "honorsNotes": "Honors / thesis / academic notes, one per line"
+    }
+  },
+  "editorJob": {
+    "backDashboard": "Job dashboard",
+    "creditsLine": "Credits: {{credits}} • {{cost}} credit per export",
+    "exportCv": "CV",
+    "exportCover": "Cover",
+    "exportEmail": "Email",
+    "noExportCredits": "No export credits",
+    "eyebrow": "Structured resume profile",
+    "title": "Fill the form. Exports stay structured.",
+    "intro": "Complete each section below. The app builds the JSON profile internally and uses it to generate CV, cover letter, and email outputs.",
+    "saved": "Saved successfully.",
+    "errorFields": "Please check required fields, especially name, headline, location, and email.",
+    "lowCreditsBanner": "You can keep editing, but each download costs credits. Request more from the top menu or ask an admin.",
+    "fieldResumeTitle": "Resume title",
+    "fieldCountryMarket": "Country / target market",
+    "saveResume": "Save resume",
+    "sections": {
+      "personal": {
+        "title": "Personal information",
+        "desc": "The contact block shown at the top of your CV."
+      },
+      "target": {
+        "title": "Target role and relocation",
+        "desc": "Country-specific language for recruiters and hiring managers."
+      },
+      "summary": {
+        "title": "Professional summary",
+        "desc": "One paragraph per line. Keep it concise and achievement-focused."
+      },
+      "skills": {
+        "title": "Skills",
+        "desc": "Use comma-separated keywords so ATS and recruiters can scan quickly."
+      },
+      "experience": {
+        "title": "Experience",
+        "desc": "Add or remove roles as needed. Put one achievement bullet per line."
+      },
+      "projects": {
+        "title": "Projects",
+        "desc": "Portfolio and product work. Put one bullet per line."
+      },
+      "education": {
+        "title": "Education and languages",
+        "desc": "Academic background and spoken languages."
+      },
+      "credentials": {
+        "title": "Credentials and achievements",
+        "desc": "Certifications, awards, publications, patents, and volunteer work for stronger migration and recruiter signals."
+      },
+      "cover": {
+        "title": "Cover letter text",
+        "desc": "Reusable opening and closing used by cover letter exports."
+      }
+    },
+    "fields": {
+      "relocationLine": "Relocation line",
+      "permitParagraph": "Permit / sponsorship paragraph",
+      "availability": "Availability / notice period",
+      "preferredLocations": "Preferred locations, comma-separated",
+      "targetRoles": "Target roles, comma-separated",
+      "summaryParagraphs": "Summary paragraphs",
+      "languagesLines": "Languages, one per line",
+      "certifications": "Certifications, one per line",
+      "awards": "Awards / honors, one per line",
+      "publications": "Publications, one per line",
+      "patents": "Patents, one per line",
+      "volunteer": "Volunteer / community work, one per line",
+      "greeting": "Greeting",
+      "opening": "Opening paragraph",
+      "closing": "Closing paragraph",
+      "fullName": "Full name",
+      "headline": "Professional headline",
+      "location": "Location",
+      "address": "Address",
+      "nationality": "Nationality",
+      "email": "Email",
+      "phone": "Phone",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "website": "Website"
+    }
+  },
+  "editorAcademic": {
+    "backDashboard": "Academic dashboard",
+    "creditsLine": "Academic CV • Credits: {{credits}} • {{cost}} credit per export",
+    "exportLabel": "Academic CV",
+    "noExportCredits": "No export credits",
+    "eyebrow": "University admissions CV",
+    "title": "Academic CV (separate from job resume)",
+    "intro": "Sections focus on research, teaching, publications, and references. Exports are MD, DOCX, or PDF as a single academic CV document.",
+    "saved": "Saved successfully.",
+    "errorRequired": "Please check required fields: full name, email, and location are required.",
+    "lowCreditsBanner": "You can keep editing, but each download costs credits.",
+    "fieldDocTitle": "Document title",
+    "fieldRegionTag": "Region / focus (stored as country tag)",
+    "saveCv": "Save academic CV",
+    "sections": {
+      "contact": {
+        "title": "Contact",
+        "desc": "ORCID and academic links are optional but recommended."
+      },
+      "application": {
+        "title": "Application focus (optional)",
+        "desc": "Shown near the top for context (program, school, intake)."
+      },
+      "researchInterests": {
+        "title": "Research interests",
+        "desc": "One bullet per line."
+      },
+      "education": {
+        "title": "Education",
+        "desc": "Degrees, thesis notes, and honors per entry."
+      },
+      "teaching": {
+        "title": "Teaching",
+        "desc": "TA or instructor roles; bullets support evidence of teaching quality."
+      },
+      "researchExp": {
+        "title": "Research experience",
+        "desc": "Labs, research assistantships, and thesis work."
+      },
+      "publications": {
+        "title": "Publications",
+        "desc": "Structured entries with optional DOI and venue."
+      },
+      "presentations": {
+        "title": "Presentations and posters",
+        "desc": "Conference talks and posters."
+      },
+      "projects": {
+        "title": "Projects",
+        "desc": "Research or engineering projects (same structure as job builder)."
+      },
+      "skills": {
+        "title": "Skills",
+        "desc": "Group technical and domain skills for committees."
+      },
+      "honors": {
+        "title": "Honors, grants, service, languages",
+        "desc": "Supporting lines for admissions committees."
+      },
+      "tests": {
+        "title": "Standardized tests",
+        "desc": "GRE, IELTS, TOEFL, subject tests, etc."
+      },
+      "references": {
+        "title": "References",
+        "desc": "Optional; remove extra rows if you prefer \"available upon request\"."
+      }
+    },
+    "fields": {
+      "program": "Program / degree",
+      "institution": "Institution",
+      "intakeTerm": "Intake term",
+      "interestsLines": "Interests, one per line",
+      "honorsScholarships": "Honors / scholarships, one per line",
+      "grantsFunding": "Grants / funding, one per line",
+      "serviceLines": "Professional service (reviewing, org roles), one per line",
+      "languagesLines": "Languages, one per line",
+      "fullName": "Full name",
+      "email": "Email",
+      "location": "Location",
+      "phone": "Phone",
+      "address": "Address",
+      "nationality": "Nationality",
+      "linkedin": "LinkedIn",
+      "websiteScholar": "Website / Google Scholar",
+      "orcid": "ORCID",
+      "orcidPlaceholder": "0000-0000-0000-0000"
+    },
+    "teachingEditor": {
+      "cardTitle": "Teaching {{n}}",
+      "add": "Add teaching",
+      "institution": "Institution",
+      "course": "Course",
+      "role": "Role (e.g. TA, instructor)",
+      "period": "Period",
+      "bullets": "Bullets, one per line"
+    },
+    "researchEditor": {
+      "cardTitle": "Research {{n}}",
+      "add": "Add research experience",
+      "labOptional": "Lab / group (optional)",
+      "institution": "Institution",
+      "titleRole": "Title / role",
+      "period": "Period",
+      "bullets": "Bullets, one per line"
+    },
+    "publicationsEditor": {
+      "cardTitle": "Publication {{n}}",
+      "add": "Add publication",
+      "fullCitation": "Full citation",
+      "doiOptional": "DOI (optional)",
+      "venue": "Venue",
+      "year": "Year"
+    },
+    "presentationsEditor": {
+      "cardTitle": "Presentation {{n}}",
+      "add": "Add presentation",
+      "title": "Title",
+      "kind": "Type (talk, poster, …)",
+      "venue": "Venue / conference",
+      "date": "Date"
+    },
+    "testsEditor": {
+      "cardTitle": "Test {{n}}",
+      "add": "Add test",
+      "examName": "Exam name",
+      "score": "Score",
+      "date": "Date"
+    },
+    "referencesEditor": {
+      "cardTitle": "Reference {{n}}",
+      "add": "Add reference",
+      "name": "Name",
+      "title": "Title",
+      "affiliation": "Affiliation",
+      "email": "Email",
+      "phone": "Phone"
+    }
+  },
+  "admin": {
+    "backUserDashboard": "User Dashboard",
+    "optionManagement": "Option Management",
+    "resumeTargets": "Resume Targets",
+    "eyebrow": "Admin dashboard",
+    "title": "Manage users and account credit.",
+    "intro": "Review users, set their current credit balance, assign plans, suspend accounts, and jump to shared option management. New signups start with {{credits}} credits; creating a resume, each file export, and unlocking a new lesson day all spend credits.",
+    "toastUpdated": "User account updated.",
+    "toastPasswordReset": "User password reset successfully.",
+    "toastCreditReviewed": "Credit request reviewed.",
+    "toastError": "Could not update that user. Check the user or password fields.",
+    "statUsers": "Users",
+    "statActiveUsers": "Active users",
+    "statTotalCredits": "Total credits",
+    "statResumes": "Resumes",
+    "creditRequestsTitle": "Credit requests",
+    "creditRequestsHint": "Approve requests to add credits automatically, or reject with an admin note.",
+    "pendingBadge": "{{count}} pending",
+    "creditRequestAmount": "+{{amount}} credits",
+    "noPendingRequests": "No pending credit requests.",
+    "noMessage": "No message provided.",
+    "requestedAt": "Requested {{date}}",
+    "adminNote": "Admin note",
+    "adminNotePlaceholder": "Optional note",
+    "approve": "Approve",
+    "reject": "Reject",
+    "usersTitle": "Users",
+    "usersHint": "Update credits and account state per user.",
+    "manageDropdownOptions": "Manage dropdown options",
+    "manageResumeTargets": "Manage resume targets",
+    "miniCredits": "Credits",
+    "miniPlan": "Plan",
+    "miniResumes": "Resumes",
+    "miniDownloads": "Downloads",
+    "miniUnlockedDays": "Unlocked days",
+    "miniCompletedDays": "Completed days",
+    "joinedUpdated": "Joined {{created}} • updated {{updated}}",
+    "fieldCurrentCredits": "Current credits",
+    "fieldPlan": "Plan",
+    "planPlaceholder": "Free, Pro, Premium",
+    "statusLabel": "Status",
+    "statusActive": "active",
+    "statusSuspended": "suspended",
+    "adminNotes": "Admin notes",
+    "saveAccount": "Save account",
+    "newPassword": "New password",
+    "confirmPassword": "Confirm password",
+    "passwordMinPlaceholder": "Minimum 8 characters",
+    "passwordRepeatPlaceholder": "Repeat password",
+    "resetPassword": "Reset password"
+  },
+  "adminOptions": {
+    "backAdmin": "Admin Dashboard",
+    "badge": "Admin options",
+    "eyebrow": "Reusable dropdown data",
+    "title": "Manage resume field options.",
+    "intro": "Define repeated values once here. Resume forms use these lists for dropdowns and guided inputs.",
+    "saved": "Options saved successfully.",
+    "error": "Could not save this option set.",
+    "save": "Save",
+    "helpLines": "One value per line. Empty lines and duplicates are removed automatically."
+  },
+  "adminTargets": {
+    "backAdmin": "Admin",
+    "viewUserPage": "View user page",
+    "tabWork": "Work & recruiters",
+    "tabUniversities": "Universities",
+    "workAsideTitle": "Countries",
+    "workAsideHint": "Job boards, recruiters, companies",
+    "uniAsideTitle": "Country & field",
+    "uniAsideHint": "Per study area (same line format as work targets)",
+    "countryLabel": "Country",
+    "saveTargets": "Save targets",
+    "saveUniversities": "Save universities",
+    "lineFormatTitle": "Line format:",
+    "lineFormatExample": "Type | Name | URL | Email | Location | Notes | tag1, tag2",
+    "targetsLinesLabel": "Targets, one per line",
+    "institutionsLinesLabel": "Institutions, one per line",
+    "fieldStudyPlaceholder": "e.g. Computer Science & Engineering",
+    "uniTypesHint": "Use types like University, Business school, or Graduate school.",
+    "lineFormatSame": "Line format (same as work):",
+    "headerWorkEyebrow": "Admin resume targets",
+    "headerWorkTitle": "Manage where users can send resumes.",
+    "headerWorkBody": "Add recruiter, job board, and company targets per country. Users see this list filtered by selected country.",
+    "headerUniEyebrow": "Admin university targets",
+    "headerUniTitle": "Manage admissions links by country and field.",
+    "headerUniBody": "Add universities, graduate schools, and business schools per country and field of study. Users browse the same list on the targets page.",
+    "saved": "Saved.",
+    "errorWork": "Could not save. Check country and line format.",
+    "errorUni": "Could not save. Check country, field, and line format."
+  }
+}

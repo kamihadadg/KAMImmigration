@@ -87,9 +87,14 @@ web_modules/
 .next
 out
 
+# Local app data
+data/*.sqlite
+data/*.sqlite-*
+
 # Nuxt.js build / generate output
 .nuxt
 dist
+release
 
 # Gatsby files
 .cache/

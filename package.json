@@ -1,0 +1,35 @@
+{
+  "name": "kamclb9",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A web-only migration prep platform with a Next.js resume builder, CLB9 learning path, SQLite storage, and document exports.",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "generate:content": "node scripts/generate-content.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^12.9.0",
+    "clsx": "latest",
+    "docx": "^9.6.1",
+    "lucide-react": "latest",
+    "next": "latest",
+    "pdfkit": "^0.18.0",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "^4.4.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "latest",
+    "@types/pdfkit": "^0.17.6",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}

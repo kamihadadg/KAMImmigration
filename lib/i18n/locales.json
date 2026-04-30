@@ -1,0 +1,8 @@
+{
+  "defaultLocale": "en",
+  "localeCookieName": "kam_locale",
+  "languages": [
+    { "code": "en", "shortLabel": "EN" },
+    { "code": "fa", "shortLabel": "FA" }
+  ]
+}
