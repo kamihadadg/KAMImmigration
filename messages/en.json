@@ -88,7 +88,7 @@
     "hero": {
       "badge": "One platform for three tracks: study, work, language",
       "title": "From deciding to move to documents, English, and applications — keep everything in one flow.",
-      "subtitle": "Whether you need university admission, a work visa, or language points, build professional resumes and letters, follow the CLB9 path, and know where to send your CV.",
+      "subtitle": "Whether you need university admission, a work visa, or language points, build professional resumes and letters, follow the CLB9 path, and know where to send your CV—with optional AI coaching inside each lesson section and resume field, grounded in your draft and backed by credits.",
       "startFree": "Start with 10 credits",
       "haveAccount": "I have an account — Sign in",
       "myDashboard": "My dashboard",
@@ -98,7 +98,8 @@
       "starterCredits": "{{credits}} starter credits",
       "creditResume": "1 credit per new resume",
       "creditExportDay": "1 credit per export or new lesson day",
-      "clb9Path": "{{days}}-day CLB9 path"
+      "clb9Path": "{{days}}-day CLB9 path",
+      "aiAssist": "AI assist in lessons & resume (configured key; uses credits)"
     },
     "sidebar": {
       "eyebrow": "Your status",
@@ -109,9 +110,9 @@
     },
     "miniRows": {
       "languageTitle": "Language for visa & school",
-      "languageText": "CLB9, four skills, and daily notes in the same account.",
+      "languageText": "CLB9, four skills, daily notes, and per-section AI help in one account.",
       "workTitle": "Job application package",
-      "workText": "Resume, cover letter, and employer email with professional exports.",
+      "workText": "Resume, cover letter, and employer email—professional exports plus AI coaching on your draft.",
       "targetsTitle": "Country targeting",
       "targetsText": "Employer, job board, and recruiter lists by destination."
     },
@@ -177,7 +178,7 @@
     "cta": {
       "eyebrow": "Your next step",
       "title": "Study, work, or language migration — start in an organized way.",
-      "subtitle": "Create an account, build your resume, move language forward daily, and align send lists with real destinations.",
+      "subtitle": "Create an account, build your resume, move language forward daily, use in-app AI where you learn and write, and align send lists with real destinations.",
       "dashboard": "Go to dashboard",
       "register": "Register",
       "resumeBuilder": "Resume builder"

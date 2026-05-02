@@ -91,6 +91,7 @@ export default async function Home() {
                 <TrustChip text={t(m, "landing.trust.starterCredits", { credits: DEFAULT_STARTING_CREDITS })} />
                 <TrustChip text={m.landing.trust.creditResume} />
                 <TrustChip text={m.landing.trust.creditExportDay} />
+                <TrustChip text={m.landing.trust.aiAssist} />
                 <TrustChip text={t(m, "landing.trust.clb9Path", { days: overview.totalDays })} />
               </div>
             </div>
