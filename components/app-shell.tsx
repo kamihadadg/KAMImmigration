@@ -1,6 +1,7 @@
 import { ArrowRight, Brain, CalendarDays, Database, Flame, GraduationCap, Headphones, Server, Sparkles } from "lucide-react";
 import { LessonWorkspace } from "@/components/lesson-workspace";
 import type { LessonBundle } from "@/lib/lesson-types";
+import type { Messages } from "@/lib/i18n/messages";
 
 type AppShellProps = {
   overview: {
@@ -16,9 +17,19 @@ type AppShellProps = {
   basePath?: string;
   savedBlocks?: Record<string, boolean>;
   persistBlocks?: boolean;
+  aiAssist?: Messages["aiAssist"];
+  aiCreditCost?: number;
 };
 
-export function AppShell({ overview, bundle, basePath = "/day", savedBlocks = {}, persistBlocks = false }: AppShellProps) {
+export function AppShell({
+  overview,
+  bundle,
+  basePath = "/day",
+  savedBlocks = {},
+  persistBlocks = false,
+  aiAssist,
+  aiCreditCost = 1
+}: AppShellProps) {
   const stats = [
     ["Days", overview.totalDays],
     ["Words", overview.totalVocabulary],
@@ -98,7 +109,15 @@ export function AppShell({ overview, bundle, basePath = "/day", savedBlocks = {}
         </section>
 
         <div id="lesson">
-          <LessonWorkspace bundle={bundle} totalDays={overview.totalDays} basePath={basePath} savedBlocks={savedBlocks} persistBlocks={persistBlocks} />
+          <LessonWorkspace
+            bundle={bundle}
+            totalDays={overview.totalDays}
+            basePath={basePath}
+            savedBlocks={savedBlocks}
+            persistBlocks={persistBlocks}
+            aiAssist={aiAssist}
+            aiCreditCost={aiCreditCost}
+          />
         </div>
       </section>
     </main>

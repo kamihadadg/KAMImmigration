@@ -3,7 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { AppShell } from "@/components/app-shell";
 import { getLessonBundle, getOverview } from "@/lib/content";
 import { getDayProgress } from "@/lib/learning/progress";
-import { getUserAccount, LEARNING_DAY_CREDIT_COST, unlockLearningDay } from "@/lib/resume-builder/admin";
+import { getUserAccount, AI_ASSIST_CREDIT_COST, LEARNING_DAY_CREDIT_COST, unlockLearningDay } from "@/lib/resume-builder/admin";
 import { getCurrentUser } from "@/lib/resume-builder/auth";
 import { getLocale } from "@/lib/i18n/get-locale";
 import { getMessages } from "@/lib/i18n/messages";
@@ -100,7 +100,15 @@ export default async function LearnDayPage({ params, searchParams }: LearnDayPag
           </form>
         </div>
       </section>
-      <AppShell overview={overview} bundle={bundle} basePath="/learn/day" savedBlocks={progress.blocks} persistBlocks />
+      <AppShell
+        overview={overview}
+        bundle={bundle}
+        basePath="/learn/day"
+        savedBlocks={progress.blocks}
+        persistBlocks
+        aiAssist={m.aiAssist}
+        aiCreditCost={AI_ASSIST_CREDIT_COST}
+      />
     </>
   );
 }

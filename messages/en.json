@@ -54,7 +54,19 @@
     "email": "Email",
     "save": "Save changes",
     "security": "Security",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "aiEyebrow": "AI (optional)",
+    "aiProvider": "AI provider",
+    "aiProviderHelp": "If the server does not set LLM_API_BASE, this chooses the API host. Pick Gemini for Google AI Studio keys.",
+    "aiProviderAuto": "Auto-detect",
+    "aiProviderGemini": "Google Gemini (AI Studio)",
+    "aiProviderOpenAI": "OpenAI or compatible API (default host: api.openai.com)",
+    "aiModel": "Model name",
+    "aiModelPlaceholder": "e.g. gemini-2.5-flash or gpt-4o-mini",
+    "aiApiKey": "API key",
+    "aiApiKeyPlaceholder": "Leave blank to keep your saved key",
+    "aiKeyStoredHint": "A key is saved on the server (encrypted). Enter a new key to replace it.",
+    "aiClearKey": "Remove saved API key"
   },
   "landing": {
     "localNav": {
@@ -223,6 +235,38 @@
     "noExportCredits": "No export credits",
     "defaultValue": "Default",
     "creditRequestSent": "Credit increase request sent. An admin will review it."
+  },
+  "aiAssist": {
+    "fabTitle": "AI help",
+    "fabAria": "Ask AI about this section",
+    "costHint": "{{cost}} credit per question · Balance updates after each answer",
+    "modalTitle": "AI coach",
+    "pickTask": "Choose what you need",
+    "ask": "Get answer",
+    "close": "Close",
+    "loading": "Thinking…",
+    "resultTitle": "Answer",
+    "errorCredits": "Not enough credits.",
+    "errorGeneric": "Could not reach AI. Try again.",
+    "errorNoAi": "AI is not configured. Add an API key in Profile or set server keys.",
+    "errorAuth": "Sign in to use AI assist.",
+    "errorInvalidKey": "API key was rejected. Check Profile or server env LLM_API_KEY / OPENAI_API_KEY.",
+    "errorRateLimit": "The model provider rate-limited this key. Wait a bit and retry.",
+    "errorTimeout": "The model took too long to respond. Try again.",
+    "errorNetwork": "This server could not reach the model API. Check internet, firewall, or LLM_API_BASE.",
+    "errorUpstream": "The model provider returned an error. Retry later.",
+    "errorParse": "The model returned an unexpected response. Check LLM_API_BASE and model name.",
+    "errorBadRequest": "Request rejected — often wrong model name or parameters. Details:",
+    "tasks": {
+      "moreExamples": "More examples",
+      "explainSimple": "Explain simply",
+      "listeningHelp": "Listening tips",
+      "readingHelp": "Reading strategy",
+      "writingIdeas": "Ideas & phrases",
+      "speakingHints": "Speaking hints",
+      "quizExplain": "Explain answer",
+      "vocabDeep": "Deep dive (word)"
+    }
   },
   "learning": {
     "navBrand": "KAM Migration Prep",

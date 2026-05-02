@@ -138,6 +138,18 @@ function migrate(db: any) {
     db.exec("ALTER TABLE resumes ADD COLUMN kind TEXT NOT NULL DEFAULT 'job'");
   }
 
+  let settingsCols = db.prepare("PRAGMA table_info(user_settings)").all() as Array<{ name: string }>;
+  if (!settingsCols.some((column) => column.name === "ai_model")) {
+    db.exec("ALTER TABLE user_settings ADD COLUMN ai_model TEXT NOT NULL DEFAULT ''");
+  }
+  if (!settingsCols.some((column) => column.name === "ai_api_key_encrypted")) {
+    db.exec("ALTER TABLE user_settings ADD COLUMN ai_api_key_encrypted TEXT NOT NULL DEFAULT ''");
+  }
+  settingsCols = db.prepare("PRAGMA table_info(user_settings)").all() as Array<{ name: string }>;
+  if (!settingsCols.some((column) => column.name === "ai_provider")) {
+    db.exec("ALTER TABLE user_settings ADD COLUMN ai_provider TEXT NOT NULL DEFAULT 'auto'");
+  }
+
   const userVersion = Number(db.pragma("user_version", { simple: true }));
   if (userVersion < 2) {
     db.prepare("UPDATE user_accounts SET credits = 10 WHERE credits = 0").run();

@@ -5,6 +5,7 @@ import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 import { DEFAULT_STARTING_CREDITS } from "./admin";
 import { getDb, mapUser } from "./db";
+import { ensureUserSettingsRow } from "./user-ai-settings";
 import type { UserRecord } from "./schema";
 
 const cookieName = "kam_resume_session";
@@ -107,6 +108,7 @@ export async function registerUser(name: string, email: string, password: string
   getDb()
     .prepare("INSERT OR IGNORE INTO user_accounts (user_id, credits) VALUES (?, ?)")
     .run(userId, DEFAULT_STARTING_CREDITS);
+  ensureUserSettingsRow(userId);
   await setSession(userId);
 }
 

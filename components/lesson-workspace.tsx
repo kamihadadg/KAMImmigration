@@ -1,8 +1,20 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import { BookOpen, CheckCircle2, ChevronLeft, ChevronRight, Headphones, Mic2, PenLine, Play, Sparkles, Volume2 } from "lucide-react";
-import type { LessonBundle, PracticeQuestion } from "@/lib/lesson-types";
+import { AiAssistBubble, type AiAssistLabels, type AssistSection, type AssistTaskKey } from "@/components/ai-assist-bubble";
+import type { Messages } from "@/lib/i18n/messages";
+import type {
+  GrammarLesson,
+  LessonBundle,
+  ListeningLesson,
+  PracticeQuestion,
+  Quiz,
+  ReadingLesson,
+  SpeakingTask,
+  VocabularyItem,
+  WritingTask
+} from "@/lib/lesson-types";
 
 const tabs = ["Vocabulary", "Grammar", "Listening", "Reading", "Writing", "Speaking", "Quiz"] as const;
 type Tab = (typeof tabs)[number];
@@ -17,18 +29,137 @@ function persianTextProps(text: string) {
   } as const;
 }
 
+function vocabularyContext(item: VocabularyItem): string {
+  return [
+    `Word: ${item.word}`,
+    `Meaning (FA): ${item.meaningFa}`,
+    `Pronunciation: ${item.pronunciation}`,
+    `Definition: ${item.definitionEn}`,
+    `Example: ${item.example}`,
+    `Translation (FA): ${item.translationFa}`,
+    `Collocations: ${item.collocations.join(", ")}`,
+    `Synonyms: ${item.synonyms.join(", ")}`,
+    `Quiz Q: ${item.quiz.question}`
+  ].join("\n");
+}
+
+function grammarContext(g: GrammarLesson): string {
+  return [
+    `Title: ${g.title}`,
+    `Structure: ${g.structure}`,
+    `Explanation (FA): ${g.explanationFa}`,
+    `Examples:\n${g.examples.map((e) => `${e.en} | ${e.fa}`).join("\n")}`,
+    `Common mistakes:\n${g.commonMistakes.map((m) => `${m.wrong} → ${m.correct} (${m.reasonFa})`).join("\n")}`,
+    `Exercise: ${g.exercise.instruction}`,
+    `Sample: ${g.exercise.sampleAnswer}`
+  ].join("\n\n");
+}
+
+function listeningContext(l: ListeningLesson): string {
+  return [
+    `Title: ${l.title}`,
+    `Script:\n${l.script}`,
+    `Vocabulary focus: ${l.vocabularyFocus.join(", ")}`,
+    `Questions:\n${l.questions.map((q) => `${q.id}. ${q.question}`).join("\n")}`
+  ].join("\n\n");
+}
+
+function readingContext(r: ReadingLesson): string {
+  return [`Title: ${r.title}`, `Passage:\n${r.text}`, `Questions:\n${r.questions.map((q) => `${q.id}. ${q.question}`).join("\n")}`].join("\n\n");
+}
+
+function writingContext(w: WritingTask): string {
+  return [`Type: ${w.type}`, `Title: ${w.title}`, `Prompt:\n${w.prompt}`, `Band-7 tip (FA):\n${w.band7TipFa}`, `Checklist:\n${w.checklist.join("\n")}`].join("\n\n");
+}
+
+function speakingContext(s: SpeakingTask): string {
+  return [
+    `Title: ${s.title}`,
+    `Sample starter: ${s.sampleStarter}`,
+    `Part 1:\n${s.part1.join("\n")}`,
+    `Part 2 cue: ${s.part2.cueCard}`,
+    `Part 2 prompts:\n${s.part2.prompts.join("\n")}`,
+    `Part 3:\n${s.part3.join("\n")}`
+  ].join("\n\n");
+}
+
+function quizContext(q: Quiz): string {
+  return [
+    `Quiz: ${q.title}`,
+    q.questions.map((ques) => `${ques.id}. [${ques.type}] ${ques.question}\nOptions: ${(ques.options ?? []).join(" | ")}\nAnswer: ${ques.answer}\nNote: ${ques.explanationFa ?? ""}`).join("\n\n")
+  ].join("\n\n");
+}
+
+function tasksFor(section: AssistSection, labels: AiAssistLabels): Array<{ key: AssistTaskKey; label: string }> {
+  const t = labels.tasks;
+  switch (section) {
+    case "vocabulary":
+      return [
+        { key: "vocab_deep", label: t.vocabDeep },
+        { key: "more_examples", label: t.moreExamples },
+        { key: "explain_simple", label: t.explainSimple }
+      ];
+    case "grammar":
+      return [
+        { key: "more_examples", label: t.moreExamples },
+        { key: "explain_simple", label: t.explainSimple }
+      ];
+    case "listening":
+      return [
+        { key: "listening_help", label: t.listeningHelp },
+        { key: "more_examples", label: t.moreExamples },
+        { key: "explain_simple", label: t.explainSimple }
+      ];
+    case "reading":
+      return [
+        { key: "reading_help", label: t.readingHelp },
+        { key: "explain_simple", label: t.explainSimple }
+      ];
+    case "writing":
+      return [
+        { key: "writing_ideas", label: t.writingIdeas },
+        { key: "more_examples", label: t.moreExamples }
+      ];
+    case "speaking":
+      return [
+        { key: "speaking_hints", label: t.speakingHints },
+        { key: "more_examples", label: t.moreExamples }
+      ];
+    case "quiz":
+      return [
+        { key: "quiz_explain", label: t.quizExplain },
+        { key: "explain_simple", label: t.explainSimple }
+      ];
+    default:
+      return [{ key: "explain_simple", label: t.explainSimple }];
+  }
+}
+
+type PanelAssist = {
+  day: number;
+  section: AssistSection;
+  contextText: string;
+  labels: AiAssistLabels;
+  creditCost: number;
+  tasks: Array<{ key: AssistTaskKey; label: string }>;
+};
+
 export function LessonWorkspace({
   bundle,
   totalDays,
   basePath = "/day",
   savedBlocks = {},
-  persistBlocks = false
+  persistBlocks = false,
+  aiAssist,
+  aiCreditCost = 1
 }: {
   bundle: LessonBundle;
   totalDays: number;
   basePath?: string;
   savedBlocks?: Record<string, boolean>;
   persistBlocks?: boolean;
+  aiAssist?: Messages["aiAssist"];
+  aiCreditCost?: number;
 }) {
   const [activeTab, setActiveTab] = useState<Tab>("Vocabulary");
   const [jumpDay, setJumpDay] = useState(String(bundle.dailyLesson.day));
@@ -38,6 +169,21 @@ export function LessonWorkspace({
   const day = bundle.dailyLesson.day;
   const previousDay = Math.max(1, day - 1);
   const nextDay = Math.min(totalDays, day + 1);
+
+  const assistOn = Boolean(aiAssist);
+  const L = aiAssist;
+
+  function panelAssist(section: AssistSection, contextText: string): PanelAssist | undefined {
+    if (!assistOn || !L) return undefined;
+    return {
+      day,
+      section,
+      contextText,
+      labels: L,
+      creditCost: aiCreditCost,
+      tasks: tasksFor(section, L)
+    };
+  }
 
   function speak(text: string) {
     if (typeof window === "undefined" || !("speechSynthesis" in window)) {
@@ -67,6 +213,63 @@ export function LessonWorkspace({
     }
   }
 
+  function vocabArticle(item: VocabularyItem): ReactNode {
+    const inner = (
+      <>
+        <img src={item.image} alt="" className="mb-4 h-28 w-full rounded-2xl object-cover" />
+        <p className="text-xs uppercase tracking-[0.35em] text-cyan-200">{item.level}</p>
+        <h3 className="mt-2 text-2xl font-black">{item.word}</h3>
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          <p lang="fa" className="text-lg text-emerald-200">
+            {item.meaningFa}
+          </p>
+          <span className="rounded-full bg-white/8 px-3 py-1 font-mono text-xs text-slate-300">{item.pronunciation}</span>
+          <button
+            onClick={() => speak(item.word)}
+            className="inline-flex items-center gap-1 rounded-full bg-cyan-300 px-3 py-1 text-xs font-bold text-slate-950 transition hover:bg-cyan-200"
+            type="button"
+          >
+            <Volume2 size={14} /> Listen
+          </button>
+        </div>
+        <p className="mt-3 text-sm leading-6 text-slate-300">{item.definitionEn}</p>
+        <p className="mt-4 rounded-2xl bg-white/8 p-3 text-sm text-slate-200">{item.example}</p>
+        <p lang="fa" className="mt-2 text-sm leading-6 text-slate-400">
+          {item.translationFa}
+        </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {item.collocations.map((collocation) => (
+            <span key={collocation} className="rounded-full bg-cyan-400/10 px-3 py-1 text-xs text-cyan-100">
+              {collocation}
+            </span>
+          ))}
+        </div>
+      </>
+    );
+
+    if (assistOn && L) {
+      return (
+        <AiAssistBubble
+          key={item.id}
+          day={day}
+          section="vocabulary"
+          contextText={vocabularyContext(item)}
+          labels={L}
+          creditCost={aiCreditCost}
+          tasks={tasksFor("vocabulary", L)}
+        >
+          <article className="relative overflow-visible rounded-3xl border border-white/10 bg-slate-950/45 p-5">{inner}</article>
+        </AiAssistBubble>
+      );
+    }
+
+    return (
+      <article key={item.id} className="rounded-3xl border border-white/10 bg-slate-950/45 p-5">
+        {inner}
+      </article>
+    );
+  }
+
   return (
     <section className="grid gap-6 lg:grid-cols-[340px_1fr]">
       <aside className="glass rounded-[2rem] p-5">
@@ -83,7 +286,9 @@ export function LessonWorkspace({
         <div className="mt-6 rounded-3xl border border-white/10 bg-slate-950/45 p-4">
           <div className="mb-3 flex items-center justify-between text-sm text-slate-300">
             <span>Lesson navigation</span>
-            <span>{day}/{totalDays}</span>
+            <span>
+              {day}/{totalDays}
+            </span>
           </div>
           <div className="flex gap-2">
             <a
@@ -181,41 +386,10 @@ export function LessonWorkspace({
         </div>
 
         <div className="p-6">
-          {activeTab === "Vocabulary" && (
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {bundle.vocabulary.map((item) => (
-                <article key={item.id} className="rounded-3xl border border-white/10 bg-slate-950/45 p-5">
-                  <img src={item.image} alt="" className="mb-4 h-28 w-full rounded-2xl object-cover" />
-                  <p className="text-xs uppercase tracking-[0.35em] text-cyan-200">{item.level}</p>
-                  <h3 className="mt-2 text-2xl font-black">{item.word}</h3>
-                  <div className="mt-2 flex flex-wrap items-center gap-2">
-                    <p lang="fa" className="text-lg text-emerald-200">{item.meaningFa}</p>
-                    <span className="rounded-full bg-white/8 px-3 py-1 font-mono text-xs text-slate-300">{item.pronunciation}</span>
-                    <button
-                      onClick={() => speak(item.word)}
-                      className="inline-flex items-center gap-1 rounded-full bg-cyan-300 px-3 py-1 text-xs font-bold text-slate-950 transition hover:bg-cyan-200"
-                      type="button"
-                    >
-                      <Volume2 size={14} /> Listen
-                    </button>
-                  </div>
-                  <p className="mt-3 text-sm leading-6 text-slate-300">{item.definitionEn}</p>
-                  <p className="mt-4 rounded-2xl bg-white/8 p-3 text-sm text-slate-200">{item.example}</p>
-                  <p lang="fa" className="mt-2 text-sm leading-6 text-slate-400">{item.translationFa}</p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {item.collocations.map((collocation) => (
-                      <span key={collocation} className="rounded-full bg-cyan-400/10 px-3 py-1 text-xs text-cyan-100">
-                        {collocation}
-                      </span>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </div>
-          )}
+          {activeTab === "Vocabulary" && <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{bundle.vocabulary.map((item) => vocabArticle(item))}</div>}
 
           {activeTab === "Grammar" && (
-            <Panel icon={<BookOpen />} title={bundle.grammar.title} subtitle={bundle.grammar.explanationFa}>
+            <Panel icon={<BookOpen />} title={bundle.grammar.title} subtitle={bundle.grammar.explanationFa} assist={panelAssist("grammar", grammarContext(bundle.grammar))}>
               <code className="block rounded-2xl bg-slate-950 p-4 text-cyan-200">{bundle.grammar.structure}</code>
               <div className="mt-5 grid gap-3 md:grid-cols-2">
                 {bundle.grammar.examples.map((example) => (
@@ -229,7 +403,12 @@ export function LessonWorkspace({
           )}
 
           {activeTab === "Listening" && (
-            <Panel icon={<Headphones />} title={bundle.listening.title} subtitle="Browser Text-to-Speech is built in, so no external audio source is required.">
+            <Panel
+              icon={<Headphones />}
+              title={bundle.listening.title}
+              subtitle="Browser Text-to-Speech is built in, so no external audio source is required."
+              assist={panelAssist("listening", listeningContext(bundle.listening))}
+            >
               <button onClick={() => speak(bundle.listening.script)} className="mb-5 inline-flex items-center gap-2 rounded-full bg-cyan-300 px-5 py-3 font-bold text-slate-950">
                 <Play size={18} /> Play listening script
               </button>
@@ -239,14 +418,19 @@ export function LessonWorkspace({
           )}
 
           {activeTab === "Reading" && (
-            <Panel icon={<BookOpen />} title={bundle.reading.title} subtitle="Read once for gist, once for answers, then review explanations.">
+            <Panel
+              icon={<BookOpen />}
+              title={bundle.reading.title}
+              subtitle="Read once for gist, once for answers, then review explanations."
+              assist={panelAssist("reading", readingContext(bundle.reading))}
+            >
               <p className="rounded-3xl bg-slate-950/60 p-5 leading-8 text-slate-200">{bundle.reading.text}</p>
               <QuestionList questions={bundle.reading.questions} />
             </Panel>
           )}
 
           {activeTab === "Writing" && (
-            <Panel icon={<PenLine />} title={`${bundle.writing.type}: ${bundle.writing.title}`} subtitle={bundle.writing.band7TipFa}>
+            <Panel icon={<PenLine />} title={`${bundle.writing.type}: ${bundle.writing.title}`} subtitle={bundle.writing.band7TipFa} assist={panelAssist("writing", writingContext(bundle.writing))}>
               <p className="rounded-3xl bg-white/8 p-5 text-lg leading-8">{bundle.writing.prompt}</p>
               <textarea className="mt-5 min-h-64 w-full rounded-3xl border border-white/10 bg-slate-950/70 p-5 text-slate-100 outline-none focus:border-cyan-300" placeholder="Write your answer here..." />
               <Checklist items={bundle.writing.checklist} />
@@ -254,7 +438,7 @@ export function LessonWorkspace({
           )}
 
           {activeTab === "Speaking" && (
-            <Panel icon={<Mic2 />} title={bundle.speaking.title} subtitle={bundle.speaking.sampleStarter}>
+            <Panel icon={<Mic2 />} title={bundle.speaking.title} subtitle={bundle.speaking.sampleStarter} assist={panelAssist("speaking", speakingContext(bundle.speaking))}>
               <div className="grid gap-5 lg:grid-cols-3">
                 <QuestionCard title="Part 1" items={bundle.speaking.part1} />
                 <QuestionCard title="Part 2 Cue Card" items={[bundle.speaking.part2.cueCard, ...bundle.speaking.part2.prompts]} />
@@ -264,7 +448,7 @@ export function LessonWorkspace({
           )}
 
           {activeTab === "Quiz" && (
-            <Panel icon={<CheckCircle2 />} title={bundle.quiz.title} subtitle="Choose answers, get an instant score, then review explanations.">
+            <Panel icon={<CheckCircle2 />} title={bundle.quiz.title} subtitle="Choose answers, get an instant score, then review explanations." assist={panelAssist("quiz", quizContext(bundle.quiz))}>
               <QuizRunner questions={bundle.quiz.questions} />
             </Panel>
           )}
@@ -274,9 +458,9 @@ export function LessonWorkspace({
   );
 }
 
-function Panel({ icon, title, subtitle, children }: { icon: React.ReactNode; title: string; subtitle: string; children: React.ReactNode }) {
-  return (
-    <div>
+function Panel({ icon, title, subtitle, children, assist }: { icon: ReactNode; title: string; subtitle: string; children: ReactNode; assist?: PanelAssist }) {
+  const body = (
+    <>
       <div className="mb-6 flex items-start gap-4">
         <div className="rounded-2xl bg-white/10 p-3 text-cyan-200">{icon}</div>
         <div>
@@ -285,7 +469,17 @@ function Panel({ icon, title, subtitle, children }: { icon: React.ReactNode; tit
         </div>
       </div>
       {children}
-    </div>
+    </>
+  );
+
+  if (!assist) {
+    return <div className="relative">{body}</div>;
+  }
+
+  return (
+    <AiAssistBubble day={assist.day} section={assist.section} contextText={assist.contextText} labels={assist.labels} creditCost={assist.creditCost} tasks={assist.tasks}>
+      <div className="relative min-h-[100px]">{body}</div>
+    </AiAssistBubble>
   );
 }
 
@@ -359,7 +553,9 @@ function QuizRunner({ questions }: { questions: PracticeQuestion[] }) {
               <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-cyan-200">{question.type}</p>
-                  <h3 className="mt-2 text-lg font-bold">{question.id}. {question.question}</h3>
+                  <h3 className="mt-2 text-lg font-bold">
+                    {question.id}. {question.question}
+                  </h3>
                 </div>
                 {hasAnswered && (
                   <span className={`rounded-full px-3 py-1 text-xs font-bold ${isCorrect ? "bg-emerald-400/15 text-emerald-200" : "bg-rose-400/15 text-rose-200"}`}>
@@ -397,8 +593,14 @@ function QuizRunner({ questions }: { questions: PracticeQuestion[] }) {
 
               {hasAnswered && (
                 <div className="mt-4 rounded-2xl bg-slate-950/60 p-4 text-sm">
-                  <p {...persianTextProps(question.answer)} className={`text-emerald-200 ${persianTextProps(question.answer).className ?? ""}`}>Answer: {question.answer}</p>
-                  {question.explanationFa && <p lang="fa" dir="rtl" className="font-fa mt-2 leading-6 text-slate-300">{question.explanationFa}</p>}
+                  <p {...persianTextProps(question.answer)} className={`text-emerald-200 ${persianTextProps(question.answer).className ?? ""}`}>
+                    Answer: {question.answer}
+                  </p>
+                  {question.explanationFa && (
+                    <p lang="fa" dir="rtl" className="font-fa mt-2 leading-6 text-slate-300">
+                      {question.explanationFa}
+                    </p>
+                  )}
                 </div>
               )}
             </article>
@@ -428,8 +630,14 @@ function QuestionList({ questions }: { questions: Array<{ id: number; question: 
               })}
             </div>
           )}
-          <p {...persianTextProps(question.answer)} className={`mt-4 text-emerald-200 ${persianTextProps(question.answer).className ?? ""}`}>Answer: {question.answer}</p>
-          {question.explanationFa && <p lang="fa" dir="rtl" className="font-fa mt-2 text-sm text-slate-400">{question.explanationFa}</p>}
+          <p {...persianTextProps(question.answer)} className={`mt-4 text-emerald-200 ${persianTextProps(question.answer).className ?? ""}`}>
+            Answer: {question.answer}
+          </p>
+          {question.explanationFa && (
+            <p lang="fa" dir="rtl" className="font-fa mt-2 text-sm text-slate-400">
+              {question.explanationFa}
+            </p>
+          )}
         </details>
       ))}
     </div>

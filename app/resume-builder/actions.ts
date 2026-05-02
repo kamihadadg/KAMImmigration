@@ -15,6 +15,7 @@ import {
   updateResume
 } from "@/lib/resume-builder/resumes";
 import { academicProfileSchema, resumeProfileSchema } from "@/lib/resume-builder/schema";
+import { normalizeAiProviderPreference, updateUserAiPreferences } from "@/lib/resume-builder/user-ai-settings";
 import { textToTargets, updateResumeTargetList, updateUniversityTargetList } from "@/lib/resume-builder/targets";
 
 function value(formData: FormData, name: string) {
@@ -116,6 +117,18 @@ export async function updateProfileAction(formData: FormData) {
   const outcome = updateUserProfile(user.id, name, email);
   if (outcome === "invalid") redirect("/profile?error=invalid");
   if (outcome === "email_taken") redirect("/profile?error=email");
+
+  const clearAiKey = value(formData, "clearAiKey") === "1";
+  const aiModel = value(formData, "aiModel");
+  const aiProvider = value(formData, "aiProvider");
+  const aiApiKey = String(formData.get("aiApiKey") ?? "");
+  updateUserAiPreferences(user.id, {
+    model: aiModel,
+    provider: normalizeAiProviderPreference(aiProvider),
+    apiKey: aiApiKey,
+    clearApiKey: clearAiKey
+  });
+
   redirect("/profile?saved=1");
 }
 

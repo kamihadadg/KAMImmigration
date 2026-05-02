@@ -29,15 +29,17 @@ A **web-only** migration preparation platform: a **Resume Builder** with recruit
 
 ## Highlights
 
-| Area | What the app does |
-|------|-------------------|
-| **Auth & profile** | Email/password registration, login, profile (name/email), security page, sign-out. |
-| **Resume Builder** | Structured job CV and academic CV data, dedicated editors, SQLite persistence. |
-| **Exports** | CV, cover letter, and email-style outputs as **Markdown**, **DOCX**, and **PDF** (API routes under `app/api/resume-builder/export/`). |
-| **CLB9 learning** | Daily lessons, vocabulary, grammar, listening, reading, writing, speaking, quizzes; completed days and notes stored per user. |
-| **Internationalization** | Locale from cookies; `lib/i18n` + `messages/*.json`; fonts tuned for Farsi in layout. |
-| **Targets** | `/targets` — work send-lists and university lists by **country** (and **field** for universities). Seeds in `lib/resume-builder/targets.ts`; admins can persist overrides. |
-| **Admin** | `/admin` (options, targets) when the signed-in email is allow-listed (see [Configuration](#configuration)). |
+
+| Area                     | What the app does                                                                                                                                                          |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Auth & profile**       | Email/password registration, login, profile (name/email), security page, sign-out.                                                                                         |
+| **Resume Builder**       | Structured job CV and academic CV data, dedicated editors, SQLite persistence.                                                                                             |
+| **Exports**              | CV, cover letter, and email-style outputs as **Markdown**, **DOCX**, and **PDF** (API routes under `app/api/resume-builder/export/`).                                      |
+| **CLB9 learning**        | Daily lessons, vocabulary, grammar, listening, reading, writing, speaking, quizzes; completed days and notes stored per user.                                              |
+| **Internationalization** | Locale from cookies; `lib/i18n` + `messages/*.json`; fonts tuned for Farsi in layout.                                                                                      |
+| **Targets**              | `/targets` — work send-lists and university lists by **country** (and **field** for universities). Seeds in `lib/resume-builder/targets.ts`; admins can persist overrides. |
+| **Admin**                | `/admin` (options, targets) when the signed-in email is allow-listed (see [Configuration](#configuration)).                                                                |
+
 
 ---
 
@@ -53,15 +55,17 @@ The **dashboard hub** (`/dashboard`) links three workspaces: **Job & migration**
 
 ## Tech stack
 
-| Layer | Choice |
-|-------|--------|
-| Framework | [Next.js](https://nextjs.org/) (App Router), React |
-| Styling | [Tailwind CSS](https://tailwindcss.com/) |
-| Database | [better-sqlite3](https://github.com/WiseLibs/better-sqlite3) — file `data/resume-builder.sqlite` |
-| Validation | [Zod](https://zod.dev/) |
-| Auth session | Signed cookies; secret from env (below) |
-| Documents | [docx](https://www.npmjs.com/package/docx), [PDFKit](https://pdfkit.org/) |
-| Passwords | [bcryptjs](https://www.npmjs.com/package/bcryptjs) |
+
+| Layer        | Choice                                                                                           |
+| ------------ | ------------------------------------------------------------------------------------------------ |
+| Framework    | [Next.js](https://nextjs.org/) (App Router), React                                               |
+| Styling      | [Tailwind CSS](https://tailwindcss.com/)                                                         |
+| Database     | [better-sqlite3](https://github.com/WiseLibs/better-sqlite3) — file `data/resume-builder.sqlite` |
+| Validation   | [Zod](https://zod.dev/)                                                                          |
+| Auth session | Signed cookies; secret from env (below)                                                          |
+| Documents    | [docx](https://www.npmjs.com/package/docx), [PDFKit](https://pdfkit.org/)                        |
+| Passwords    | [bcryptjs](https://www.npmjs.com/package/bcryptjs)                                               |
+
 
 Server modules and shared logic: `lib/`. Curriculum JSON: `content/` (generated). Static lesson art: `public/images/`.
 
@@ -85,7 +89,7 @@ npm run generate:content
 npm run dev
 ```
 
-Open **http://localhost:3000** (dev server uses port **3000** per `package.json`).
+Open **[http://localhost:3000](http://localhost:3000)** (dev server uses port **3000** per `package.json`).
 
 Run `npm run generate:content` after clone and whenever you change `scripts/generate-content.mjs`, so `content/*.json` stays in sync.
 
@@ -93,13 +97,15 @@ Run `npm run generate:content` after clone and whenever you change `scripts/gene
 
 ## Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Next.js dev server on port **3000** |
-| `npm run build` | Production build |
-| `npm run start` | Production server on port **3000** |
-| `npm run lint` | `next lint` |
+
+| Command                    | Description                                 |
+| -------------------------- | ------------------------------------------- |
+| `npm run dev`              | Next.js dev server on port **3000**         |
+| `npm run build`            | Production build                            |
+| `npm run start`            | Production server on port **3000**          |
+| `npm run lint`             | `next lint`                                 |
 | `npm run generate:content` | Regenerate curriculum JSON under `content/` |
+
 
 ---
 
@@ -107,10 +113,12 @@ Run `npm run generate:content` after clone and whenever you change `scripts/gene
 
 Optional environment variables (e.g. `.env.local` for Next.js):
 
-| Variable | Purpose |
-|----------|---------|
+
+| Variable                                     | Purpose                                                                                                                    |
+| -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | `RESUME_BUILDER_SECRET` or `NEXTAUTH_SECRET` | Secret used to sign session cookies. If unset, a **development fallback** is used — **set a strong secret in production**. |
-| `RESUME_ADMIN_EMAILS` | Comma-separated admin emails. Accounts using these addresses can open `/admin` and related admin APIs. |
+| `RESUME_ADMIN_EMAILS`                        | Comma-separated admin emails. Accounts using these addresses can open `/admin` and related admin APIs.                     |
+
 
 Cookie `secure` follows `NODE_ENV === "production"`.
 
@@ -118,10 +126,12 @@ Cookie `secure` follows `NODE_ENV === "production"`.
 
 ## Data & files on disk
 
-| Path | Role |
-|------|------|
+
+| Path                         | Role                                                                                     |
+| ---------------------------- | ---------------------------------------------------------------------------------------- |
 | `data/resume-builder.sqlite` | Users, resumes, credits, learning progress, target overrides, etc. Created on first use. |
-| `data/*.sqlite-*` | SQLite WAL sidecar files when WAL mode is active. |
+| `data/*.sqlite-`*            | SQLite WAL sidecar files when WAL mode is active.                                        |
+
 
 These paths are **gitignored** (see `.gitignore`). Back up the `data/` folder if you care about user content.
 
@@ -156,16 +166,18 @@ scripts/generate-content.mjs   Builds `content/*.json`
 
 ## Main routes (map)
 
-| Path | Notes |
-|------|--------|
-| `/` | Marketing / overview, sign-up CTAs |
-| `/dashboard` | Choose work / study / language workspace |
-| `/dashboard/work`, `/dashboard/study`, `/dashboard/language` | Track-specific entry |
-| `/learn`, `/learn/day/[day]` | CLB9 daily flow |
-| `/targets` | Work and university targets (`?kind=work` \| `universities`) |
-| `/resume-builder/*` | Builder, editors, dashboard, login/register |
-| `/admin`, `/admin/targets`, `/admin/options` | Admin UI (email allow-list) |
-| `/profile`, `/security` | Account |
+
+| Path                                                         | Notes                                                       |
+| ------------------------------------------------------------ | ----------------------------------------------------------- |
+| `/`                                                          | Marketing / overview, sign-up CTAs                          |
+| `/dashboard`                                                 | Choose work / study / language workspace                    |
+| `/dashboard/work`, `/dashboard/study`, `/dashboard/language` | Track-specific entry                                        |
+| `/learn`, `/learn/day/[day]`                                 | CLB9 daily flow                                             |
+| `/targets`                                                   | Work and university targets (`?kind=work` | `universities`) |
+| `/resume-builder/*`                                          | Builder, editors, dashboard, login/register                 |
+| `/admin`, `/admin/targets`, `/admin/options`                 | Admin UI (email allow-list)                                 |
+| `/profile`, `/security`                                      | Account                                                     |
+
 
 Exact strings and labels depend on locale; keys live in `messages/*.json`.
 
@@ -211,12 +223,14 @@ Set `RESUME_BUILDER_SECRET` (or `NEXTAUTH_SECRET`) and `RESUME_ADMIN_EMAILS` in 
 
 ## Troubleshooting
 
-| Issue | Suggestion |
-|-------|------------|
-| `npm install` fails on `better-sqlite3` | Install platform build prerequisites for `node-gyp`; retry. |
-| Empty or missing lessons | Run `npm run generate:content` and confirm `content/*.json` exist. |
-| Admin pages 403 / not visible | Sign in with an email listed in `RESUME_ADMIN_EMAILS`. |
-| Lost user data | Restore `data/resume-builder.sqlite` from backup. |
+
+| Issue                                   | Suggestion                                                         |
+| --------------------------------------- | ------------------------------------------------------------------ |
+| `npm install` fails on `better-sqlite3` | Install platform build prerequisites for `node-gyp`; retry.        |
+| Empty or missing lessons                | Run `npm run generate:content` and confirm `content/*.json` exist. |
+| Admin pages 403 / not visible           | Sign in with an email listed in `RESUME_ADMIN_EMAILS`.             |
+| Lost user data                          | Restore `data/resume-builder.sqlite` from backup.                  |
+
 
 ---
 

@@ -54,7 +54,19 @@
     "email": "ایمیل",
     "save": "ذخیره تغییرات",
     "security": "امنیت",
-    "signOut": "خروج از حساب"
+    "signOut": "خروج از حساب",
+    "aiEyebrow": "هوش مصنوعی (اختیاری)",
+    "aiProvider": "ارائه‌دهندهٔ AI",
+    "aiProviderHelp": "اگر سرور LLM_API_BASE نگذارد، این گزینه میزبان API را مشخص می‌کند. برای کلید Google AI Studio گزینهٔ Gemini را بزنید.",
+    "aiProviderAuto": "تشخیص خودکار",
+    "aiProviderGemini": "Google Gemini (AI Studio)",
+    "aiProviderOpenAI": "OpenAI یا API سازگار (میزبان پیش‌فرض: api.openai.com)",
+    "aiModel": "نام مدل",
+    "aiModelPlaceholder": "مثلاً gemini-2.5-flash یا gpt-4o-mini",
+    "aiApiKey": "کلید API",
+    "aiApiKeyPlaceholder": "خالی بگذارید تا کلید ذخیره‌شده حفظ شود",
+    "aiKeyStoredHint": "کلید روی سرور ذخیره شده (رمزنگاری‌شده). برای جایگزینی، کلید جدید وارد کنید.",
+    "aiClearKey": "حذف کلید API ذخیره‌شده"
   },
   "landing": {
     "localNav": {
@@ -223,6 +235,38 @@
     "noExportCredits": "اعتبار خروجی کافی نیست",
     "defaultValue": "پیش‌فرض",
     "creditRequestSent": "درخواست افزایش اعتبار ارسال شد. مدیر آن را بررسی می‌کند."
+  },
+  "aiAssist": {
+    "fabTitle": "کمک AI",
+    "fabAria": "پرسش از هوش مصنوعی دربارهٔ این بخش",
+    "costHint": "{{cost}} اعتبار برای هر پرسش · موجودی بعد از هر پاسخ به‌روز می‌شود",
+    "modalTitle": "مربی AI",
+    "pickTask": "نوع کمک را انتخاب کنید",
+    "ask": "دریافت پاسخ",
+    "close": "بستن",
+    "loading": "در حال فکر کردن…",
+    "resultTitle": "پاسخ",
+    "errorCredits": "اعتبار کافی نیست.",
+    "errorGeneric": "ارتباط با AI برقرار نشد. دوباره تلاش کنید.",
+    "errorNoAi": "AI پیکربندی نشده. در پروفایل کلید API بگذارید یا کلید سرور را تنظیم کنید.",
+    "errorAuth": "برای کمک AI وارد حساب شوید.",
+    "errorInvalidKey": "کلید API رد شد. پروفایل یا متغیرهای محیط LLM_API_KEY / OPENAI_API_KEY را بررسی کنید.",
+    "errorRateLimit": "ارائه‌دهندهٔ مدل محدودیت نرخ گذاشته است؛ کمی بعد دوباره امتحان کنید.",
+    "errorTimeout": "پاسخ مدل خیلی طول کشید. دوباره تلاش کنید.",
+    "errorNetwork": "سرور به آدرس API مدل نرسید. اینترنت، فایروال یا LLM_API_BASE را بررسی کنید.",
+    "errorUpstream": "سرویس مدل خطا برگرداند؛ بعداً دوباره امتحان کنید.",
+    "errorParse": "پاسخ مدل غیرمنتظره بود. LLM_API_BASE و نام مدل را بررسی کنید.",
+    "errorBadRequest": "درخواست رد شد — معمولاً نام مدل یا پارامترها. جزئیات:",
+    "tasks": {
+      "moreExamples": "مثال‌های بیشتر",
+      "explainSimple": "توضیح ساده‌تر",
+      "listeningHelp": "نکات لیسنینگ",
+      "readingHelp": "استراتژی ریدینگ",
+      "writingIdeas": "ایده و عبارت",
+      "speakingHints": "راهنمای اسپیکینگ",
+      "quizExplain": "توضیح پاسخ کویز",
+      "vocabDeep": "عمیق‌تر (واژه)"
+    }
   },
   "learning": {
     "navBrand": "KAM — آماده‌سازی مهاجرت",

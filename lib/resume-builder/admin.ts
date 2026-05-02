@@ -40,6 +40,8 @@ export const FREE_LEARNING_DAY_LIMIT = 0;
 export const RESUME_CREDIT_COST = 1;
 export const EXPORT_CREDIT_COST = 1;
 export const LEARNING_DAY_CREDIT_COST = 1;
+/** Small coach requests from lesson panels (deducted per assist call). */
+export const AI_ASSIST_CREDIT_COST = 1;
 
 function ensureUserAccounts() {
   getDb()
@@ -83,6 +85,20 @@ export function debitUserCredits(userId: number, amount = EXPORT_CREDIT_COST) {
     .run(cost, userId, cost);
 
   return result.changes > 0;
+}
+
+export function refundUserCredits(userId: number, amount = AI_ASSIST_CREDIT_COST) {
+  ensureUserAccounts();
+  const cost = Math.max(1, Math.trunc(amount));
+  getDb()
+    .prepare(
+      `UPDATE user_accounts
+       SET credits = credits + ?,
+           updated_at = CURRENT_TIMESTAMP
+       WHERE user_id = ?
+         AND status = 'active'`
+    )
+    .run(cost, userId);
 }
 
 export function getUserUsage(userId: number) {
