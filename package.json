@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start -p 3000",
     "lint": "next lint",
-    "generate:content": "node scripts/generate-content.mjs"
+    "generate:content": "node scripts/generate-content.mjs",
+    "extract:targets": "node scripts/extract-targets-from-ts.mjs"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

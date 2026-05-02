@@ -1,10 +1,12 @@
 "use client";
 
 import { Plus, Trash2 } from "lucide-react";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { ResumeAiAssistBubble } from "@/components/resume-ai-assist-bubble";
 import { interpolate } from "@/lib/i18n/t";
 import type { OptionSets } from "@/lib/resume-builder/options";
 import type { ResumeProfile } from "@/lib/resume-builder/schema";
+import type { ResumeAiAssistPack } from "@/lib/resume-builder/resume-ai";
 import { useResumeFormShared } from "@/components/resume-builder/resume-form-shared-context";
 
 type ExperienceItem = ResumeProfile["experience"][number];
@@ -12,7 +14,52 @@ type ExperienceItem = ResumeProfile["experience"][number];
 type ExperienceEditorProps = {
   initialItems: ExperienceItem[];
   options: OptionSets;
+  resumeAi: ResumeAiAssistPack;
 };
+
+function readField(root: Element, name: string): string {
+  const el = root.querySelector(`[name="${CSS.escape(name)}"]`);
+  if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement || el instanceof HTMLSelectElement) return el.value;
+  return "";
+}
+
+function buildExperienceContext(root: Element | null, index: number): string {
+  if (!root) return "";
+  const p = (suffix: string) => `experience.${index}.${suffix}`;
+  return [
+    `Company: ${readField(root, p("company"))}`,
+    `Role: ${readField(root, p("title"))}`,
+    `Location: ${readField(root, p("location"))}`,
+    `Employment: ${readField(root, p("employmentType"))}`,
+    `Period: ${readField(root, p("start"))} – ${readField(root, p("end"))}`,
+    `Technologies: ${readField(root, p("technologies"))}`,
+    "",
+    "Bullets / achievements (draft):",
+    readField(root, p("bullets"))
+  ].join("\n");
+}
+
+function ExperienceBulletsWithAi({ index, item, resumeAi }: { index: number; item: ExperienceItem; resumeAi: ResumeAiAssistPack }) {
+  const sh = useResumeFormShared();
+  const exp = sh.experience;
+  const getContext = useCallback(() => {
+    const root = typeof document !== "undefined" ? document.querySelector(`[data-exp-index="${index}"]`) : null;
+    return buildExperienceContext(root, index);
+  }, [index]);
+
+  return (
+    <ResumeAiAssistBubble
+      section="experience"
+      getContext={getContext}
+      labels={resumeAi.labels}
+      emptyField={resumeAi.emptyField}
+      creditCost={resumeAi.creditCost}
+      tasks={resumeAi.tasks}
+    >
+      <TextArea label={exp.achievements} name={`experience.${index}.bullets`} defaultValue={(item.bullets ?? []).join("\n")} rows={6} />
+    </ResumeAiAssistBubble>
+  );
+}
 
 const emptyExperience: ExperienceItem = {
   company: "",
@@ -25,7 +72,7 @@ const emptyExperience: ExperienceItem = {
   bullets: []
 };
 
-export function ExperienceEditor({ initialItems, options }: ExperienceEditorProps) {
+export function ExperienceEditor({ initialItems, options, resumeAi }: ExperienceEditorProps) {
   const sh = useResumeFormShared();
   const exp = sh.experience;
   const [items, setItems] = useState<ExperienceItem[]>(initialItems.length ? initialItems : [{ ...emptyExperience }]);
@@ -42,7 +89,7 @@ export function ExperienceEditor({ initialItems, options }: ExperienceEditorProp
     <div className="grid gap-5">
       <input type="hidden" name="experienceCount" value={items.length} />
       {items.map((item, index) => (
-        <div key={index} className="rounded-3xl border border-white/10 bg-white/5 p-4">
+        <div key={index} data-exp-index={index} className="rounded-3xl border border-white/10 bg-white/5 p-4">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <p className="font-bold text-cyan-100">{interpolate(exp.cardTitle, { n: index + 1 })}</p>
             <button
@@ -69,9 +116,7 @@ export function ExperienceEditor({ initialItems, options }: ExperienceEditorProp
               placeholder={options.technologies.slice(0, 4).join(", ")}
             />
           </div>
-          <div className="mt-4">
-            <TextArea label={exp.achievements} name={`experience.${index}.bullets`} defaultValue={(item.bullets ?? []).join("\n")} rows={6} />
-          </div>
+          <ExperienceBulletsWithAi index={index} item={item} resumeAi={resumeAi} />
         </div>
       ))}
       <button

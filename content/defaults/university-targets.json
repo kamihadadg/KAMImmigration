@@ -1,0 +1,1606 @@
+[
+  {
+    "country": "United States",
+    "universities": [
+      {
+        "type": "University",
+        "name": "Carnegie Mellon University — School of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS CS subject often top ~3 worldwide; strong in systems, AI, HCI, and security.",
+        "url": "https://www.cs.cmu.edu/academics/masters/programs",
+        "location": "Pittsburgh, PA"
+      },
+      {
+        "type": "Business school",
+        "name": "Chicago Booth School of Business",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Full-time, evening, and executive MBA; rigorous analytics and economics core.",
+        "url": "https://www.chicagobooth.edu/",
+        "location": "Chicago, IL"
+      },
+      {
+        "type": "University",
+        "name": "Cornell — Food Science (CALS)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS parent (indicative): top ~20 worldwide. Dairy chemistry and product technology.",
+        "url": "https://foodscience.cals.cornell.edu/",
+        "location": "Ithaca, NY"
+      },
+      {
+        "type": "University",
+        "name": "Cornell University — Computer Science (Ithaca)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~20 worldwide. MEng CS (Ithaca) and PhD; rigorous technical preparation.",
+        "url": "https://www.cs.cornell.edu/ms",
+        "location": "Ithaca, NY"
+      },
+      {
+        "type": "University",
+        "name": "Cornell University — Department of Food Science",
+        "ranking_world": 20,
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "#1 in Food Science in USA (EduRank, indicative). QS parent university often top ~20 worldwide. Dairy science, product development, and food chemistry research strength.",
+        "url": "https://foodscience.cals.cornell.edu/",
+        "location": "Ithaca, NY"
+      },
+      {
+        "type": "Technical university",
+        "name": "Georgia Institute of Technology — College of Computing",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~80 worldwide. Excellent value; online OMSCS pathway also available separately.",
+        "url": "https://www.cc.gatech.edu/",
+        "location": "Atlanta, GA"
+      },
+      {
+        "type": "Business school",
+        "name": "Harvard Business School — MBA / Doctoral",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Harvard QS (indicative): top ~5 worldwide. Two-year MBA; case method; highly selective.",
+        "url": "https://www.hbs.edu/",
+        "location": "Boston, MA"
+      },
+      {
+        "type": "University",
+        "name": "Massachusetts Institute of Technology (MIT) — EECS graduate programmes",
+        "ranking_world": 1,
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Top university globally; #1 in engineering & technology (QS, indicative). Extremely selective MSc/PhD; research fit and faculty sponsorship critical.",
+        "url": "https://www.eecs.mit.edu/academics/graduate-programs/",
+        "location": "Cambridge, MA"
+      },
+      {
+        "type": "Business school",
+        "name": "MIT Sloan School of Management",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "MIT QS (indicative): top ~1 worldwide. MBA, Master of Finance, Master of Business Analytics.",
+        "url": "https://mitsloan.mit.edu/",
+        "location": "Cambridge, MA"
+      },
+      {
+        "type": "Business school",
+        "name": "Northwestern Kellogg School of Management",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "MBA, MMM with Engineering, and analytics-oriented masters; strong marketing and strategy brand.",
+        "url": "https://www.kellogg.northwestern.edu/",
+        "location": "Evanston, IL"
+      },
+      {
+        "type": "University",
+        "name": "Rutgers University — Food Science graduate programme",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Industry-linked research; strong FDA-adjacent food safety and quality programmes.",
+        "url": "https://foodsci.rutgers.edu/",
+        "location": "New Brunswick, NJ"
+      },
+      {
+        "type": "Business school",
+        "name": "Stanford Graduate School of Business",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "MBA, MSx, and PhD; venture and technology leadership ecosystem.",
+        "url": "https://www.gsb.stanford.edu/",
+        "location": "Stanford, CA"
+      },
+      {
+        "type": "University",
+        "name": "Stanford University — Computer Science (graduate)",
+        "ranking_world": 3,
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Strong in AI and Silicon Valley ecosystem. QS (indicative): top ~5 worldwide; competitive admissions and funding.",
+        "url": "https://cs.stanford.edu/academics/masters",
+        "location": "Stanford, CA"
+      },
+      {
+        "type": "University",
+        "name": "Texas A&M University — Department of Food Science and Technology",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Meat science, grain science, and food safety; large graduate cohort and extension network.",
+        "url": "https://foodscience.tamu.edu/",
+        "location": "College Station, TX"
+      },
+      {
+        "type": "Business school",
+        "name": "The Wharton School — University of Pennsylvania",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "UPenn QS (indicative): top ~15 worldwide. MBA, MBA/MA Lauder, and specialized masters in analytics and finance.",
+        "url": "https://www.wharton.upenn.edu/",
+        "location": "Philadelphia, PA"
+      },
+      {
+        "type": "University",
+        "name": "UC Davis — Food Science and Technology",
+        "ranking_world": 100,
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Top tier globally in Food Science (often top ~3 subject rankings; university QS band ~100 indicative). Strong sensory, microbiology, and product innovation labs.",
+        "url": "https://foodscience.ucdavis.edu/",
+        "location": "Davis, CA"
+      },
+      {
+        "type": "University",
+        "name": "University of California, Berkeley — EECS",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~15 worldwide. MEng EECS and PhD routes; large cohorts and industry pipeline.",
+        "url": "https://eecs.berkeley.edu/academics/graduate-program",
+        "location": "Berkeley, CA"
+      },
+      {
+        "type": "University",
+        "name": "University of California, Davis — Department of Food Science and Technology",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Globally top-tier food science department; MSc/PhD in sensory, safety, engineering, and brewing science.",
+        "url": "https://foodscience.ucdavis.edu/",
+        "location": "Davis, CA"
+      },
+      {
+        "type": "University",
+        "name": "University of Illinois Urbana-Champaign — Grainger CS",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Large research faculty; systems, theory, and scientific computing strengths.",
+        "url": "https://cs.illinois.edu/academics/graduate",
+        "location": "Urbana-Champaign, IL"
+      },
+      {
+        "type": "University",
+        "name": "University of Massachusetts Amherst — Food Science",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Highly cited faculty; polymer and colloid science relevant to food texture and packaging.",
+        "url": "https://www.umass.edu/life-sciences/food-science",
+        "location": "Amherst, MA"
+      },
+      {
+        "type": "University",
+        "name": "University of Washington — Paul G. Allen School of Computer Science & Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~80 worldwide. Strong ties to Pacific Northwest cloud and product companies.",
+        "url": "https://www.cs.washington.edu/academics/uw-cse-graduate-programs",
+        "location": "Seattle, WA"
+      },
+      {
+        "type": "University",
+        "name": "University of Wisconsin–Madison — Food Science",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Dairy and process research; MSc/PhD.",
+        "url": "https://foodsci.wisc.edu/",
+        "location": "Madison, WI"
+      },
+      {
+        "type": "University",
+        "name": "University of Wisconsin–Madison — Food Science (graduate)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Historic dairy research strength; food chemistry and rheology internationally recognized.",
+        "url": "https://foodsci.wisc.edu/",
+        "location": "Madison, WI"
+      }
+    ]
+  },
+  {
+    "country": "Canada",
+    "universities": [
+      {
+        "type": "University",
+        "name": "Dalhousie University — Faculty of Agriculture (Food Science)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Atlantic Canada hub; MSc and PhD in food science and bioprocessing near Halifax region.",
+        "url": "https://www.dal.ca/faculty/agriculture.html",
+        "location": "Truro, NS"
+      },
+      {
+        "type": "Business school",
+        "name": "Desautels Faculty of Management — McGill",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Parent QS (indicative): top ~30 worldwide. MBA, MMF, and analytics programmes; bilingual city context.",
+        "url": "https://www.mcgill.ca/desautels/",
+        "location": "Montreal, QC"
+      },
+      {
+        "type": "Business school",
+        "name": "HEC Montréal",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "French-first institution; some English MBA/MSc options — verify language requirements early.",
+        "url": "https://www.hec.ca/en/programs/",
+        "location": "Montreal, QC"
+      },
+      {
+        "type": "Business school",
+        "name": "Ivey Business School — Western University",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "One-year MBA (case method) and MSc in Management; strong placement in Canada.",
+        "url": "https://www.ivey.uwo.ca/",
+        "location": "London, ON"
+      },
+      {
+        "type": "University",
+        "name": "McGill — Food Science and Agricultural Chemistry",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS parent (indicative): top ~30 worldwide. Processing, safety, and food chemistry.",
+        "url": "https://www.mcgill.ca/foodscience/",
+        "location": "Montreal, QC"
+      },
+      {
+        "type": "University",
+        "name": "McGill University — Food Science and Agricultural Chemistry",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Parent QS (indicative): top ~30 worldwide. Graduate research in food safety, chemistry, and processing.",
+        "url": "https://www.mcgill.ca/foodscience/",
+        "location": "Montreal, QC"
+      },
+      {
+        "type": "University",
+        "name": "McGill University — Graduate and Postdoctoral Studies",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~30 worldwide. School of Computer Science; bilingual context in Montreal outside campus life.",
+        "url": "https://www.mcgill.ca/gps/",
+        "location": "Montreal, QC"
+      },
+      {
+        "type": "University",
+        "name": "McMaster University — Computing and Software Department (graduate)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~180 worldwide. MSc/PhD in CS, software engineering, and health-informatics crossovers.",
+        "url": "https://www.cas.mcmaster.ca/cas/future-graduate-students",
+        "location": "Hamilton, ON"
+      },
+      {
+        "type": "University",
+        "name": "Queen's University — School of Computing (graduate)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~200 worldwide. Smaller cohorts; strong undergraduate-to-graduate pipeline.",
+        "url": "https://www.queensu.ca/school-of-computing/",
+        "location": "Kingston, ON"
+      },
+      {
+        "type": "Business school",
+        "name": "Rotman School of Management — University of Toronto",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Parent university QS (indicative): top ~25 worldwide. Full-time MBA, Master of Finance, and specialized masters.",
+        "url": "https://www.rotman.utoronto.ca/",
+        "location": "Toronto, ON"
+      },
+      {
+        "type": "Business school",
+        "name": "Sauder School of Business — UBC",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Parent QS (indicative): top ~40 worldwide. MBA, MM, and professional masters in business analytics.",
+        "url": "https://www.sauder.ubc.ca/",
+        "location": "Vancouver, BC"
+      },
+      {
+        "type": "Business school",
+        "name": "Schulich School of Business — York University",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Triple-accredited; MBA, MMgt, Master of Marketing, and analytics-oriented MSc programmes.",
+        "url": "https://schulich.yorku.ca/",
+        "location": "Toronto, ON"
+      },
+      {
+        "type": "University",
+        "name": "Simon Fraser University — School of Computing Science (grad)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~350 worldwide; respected in Canada for HCI, graphics, and systems.",
+        "url": "https://www.sfu.ca/computing/prospective-students/graduate-students.html",
+        "location": "Burnaby, BC"
+      },
+      {
+        "type": "Business school",
+        "name": "Smith School of Business — Queen's University",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Queen's QS (indicative): top ~200 worldwide. Full-time MBA, Master of Finance, Management Analytics, and MSc in Management.",
+        "url": "https://smith.queensu.ca/",
+        "location": "Kingston, ON"
+      },
+      {
+        "type": "University",
+        "name": "Université de Montréal — MILA / DIRO (graduate CS)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~150 worldwide. French-language programmes common; verify English options at DIRO/MILA.",
+        "url": "https://admission.umontreal.ca/en/programs/",
+        "location": "Montreal, QC"
+      },
+      {
+        "type": "University",
+        "name": "Université Laval — Sciences des aliments (graduate)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "French-language programmes dominant; world-class dairy and maple / carbohydrate research clusters.",
+        "url": "https://www.fsaa.ulaval.ca/programmes/",
+        "location": "Quebec City, QC"
+      },
+      {
+        "type": "University",
+        "name": "University of Alberta — ALES (food-related graduate programmes)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Human nutrition and food processing research.",
+        "url": "https://www.ualberta.ca/agriculture-life-environment-sciences/index.html",
+        "location": "Edmonton, AB"
+      },
+      {
+        "type": "University",
+        "name": "University of Alberta — Faculty of Agricultural, Life & Environmental Sciences (AFNS)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Human nutrition, meat science, and food processing research groups.",
+        "url": "https://www.ualberta.ca/agriculture-life-environment-sciences/index.html",
+        "location": "Edmonton, AB"
+      },
+      {
+        "type": "University",
+        "name": "University of Alberta — Faculty of Graduate Studies (Computing Science)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Strong AI institute (Amii) links for thesis-based programmes.",
+        "url": "https://www.ualberta.ca/graduate-studies/",
+        "location": "Edmonton, AB"
+      },
+      {
+        "type": "University",
+        "name": "University of British Columbia — Faculty of Graduate Studies",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~40 worldwide. Departmental deadlines for CS / ECE; funding packages vary by supervisor.",
+        "url": "https://www.grad.ubc.ca/",
+        "location": "Vancouver / Kelowna, BC"
+      },
+      {
+        "type": "University",
+        "name": "University of British Columbia — Faculty of Land and Food Systems",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Parent QS (indicative): top ~40 worldwide. Food Science MSc/PhD; wine science and human nutrition adjacent programmes.",
+        "url": "https://lfs.ubc.ca/",
+        "location": "Vancouver, BC"
+      },
+      {
+        "type": "University",
+        "name": "University of Guelph — Department of Food Science",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Food science stream; often Canada's strongest food research programme for MSc/PhD.",
+        "url": "https://www.uoguelph.ca/foodscience/",
+        "location": "Guelph, ON"
+      },
+      {
+        "type": "University",
+        "name": "University of Guelph — Department of Food Science (MSc / PhD)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Often ranked Canada's top food science programme. QS overall (indicative): top ~400 worldwide — do not judge by overall rank alone for food specialism.",
+        "url": "https://www.uoguelph.ca/foodscience/",
+        "location": "Guelph, ON"
+      },
+      {
+        "type": "University",
+        "name": "University of Manitoba — Department of Food and Human Nutritional Sciences",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Graduate programmes in food science with prairie grains and protein research strengths.",
+        "url": "https://umanitoba.ca/agricultural-food-sciences/food-human-nutritional-sciences",
+        "location": "Winnipeg, MB"
+      },
+      {
+        "type": "University",
+        "name": "University of Saskatchewan — College of Agriculture and Bioresources (Food & bioproducts)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~350 worldwide. Strong cereal proteins, pulse ingredients, and cold-climate food research.",
+        "url": "https://grad.usask.ca/programs/",
+        "location": "Saskatoon, SK"
+      },
+      {
+        "type": "University",
+        "name": "University of Toronto — School of Graduate Studies (CS / ECE)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~25 worldwide. Extremely competitive MSc/PhD; align with faculty research before applying.",
+        "url": "https://www.sgs.utoronto.ca/",
+        "location": "Toronto, ON"
+      },
+      {
+        "type": "University",
+        "name": "University of Waterloo — Future graduate students",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~115 worldwide. Famous for co-op; Cheriton School of Computer Science.",
+        "url": "https://uwaterloo.ca/future-graduate-students/",
+        "location": "Waterloo, ON"
+      }
+    ]
+  },
+  {
+    "country": "United Kingdom",
+    "universities": [
+      {
+        "type": "Business school",
+        "name": "Alliance Manchester Business School",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "University of Manchester QS (indicative): top ~35 worldwide. MBA and specialist MSc portfolio.",
+        "url": "https://www.alliancembs.manchester.ac.uk/",
+        "location": "Manchester, England"
+      },
+      {
+        "type": "Business school",
+        "name": "Cambridge Judge Business School",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Cambridge QS (indicative): top ~5 worldwide. MBA, Executive MBA, and MFin.",
+        "url": "https://www.jbs.cam.ac.uk/",
+        "location": "Cambridge, England"
+      },
+      {
+        "type": "University",
+        "name": "Imperial College London — Department of Computing",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~10 worldwide. MSc Computing variants (AI, ML, Software Engineering).",
+        "url": "https://www.imperial.ac.uk/computing/prospective-students/",
+        "location": "London, England"
+      },
+      {
+        "type": "Business school",
+        "name": "London Business School (LBS) — MBA / Masters",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Consistently top-ranked in Europe; MBA, Masters in Finance, and Masters in Management.",
+        "url": "https://www.london.edu/",
+        "location": "London, England"
+      },
+      {
+        "type": "University",
+        "name": "Queen's University Belfast — Institute for Global Food Security",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Food security, authenticity, and analytical science; check cross-border visa context for ROI/UK.",
+        "url": "https://www.qub.ac.uk/schools/geography/",
+        "location": "Belfast, Northern Ireland"
+      },
+      {
+        "type": "Business school",
+        "name": "Saïd Business School — University of Oxford",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Oxford QS (indicative): top ~5 worldwide. MBA, Executive MBA, and MSc Financial Economics.",
+        "url": "https://www.sbs.ox.ac.uk/",
+        "location": "Oxford, England"
+      },
+      {
+        "type": "University",
+        "name": "UCL — Computer Science (graduate)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~10 worldwide. Large MSc portfolio; machine learning and financial computing popular.",
+        "url": "https://www.ucl.ac.uk/computer-science/study",
+        "location": "London, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Cambridge — Department of Computer Science and Technology",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~5 worldwide. MPhil ACS and PhD; competitive funding and supervision match.",
+        "url": "https://www.cst.cam.ac.uk/admissions",
+        "location": "Cambridge, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Edinburgh — School of Informatics",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~30 worldwide. AI, NLP, and systems groups with strong publication output.",
+        "url": "https://informatics.ed.ac.uk/",
+        "location": "Edinburgh, Scotland"
+      },
+      {
+        "type": "University",
+        "name": "University of Leeds — Food Science and Nutrition",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Food science and nutrition with strong industry-linked projects.",
+        "url": "https://environment.leeds.ac.uk/food-science",
+        "location": "Leeds, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Leeds — School of Food Science and Nutrition",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Food science, nutrition, and global food environment MSc programmes; strong industry projects.",
+        "url": "https://environment.leeds.ac.uk/food-science",
+        "location": "Leeds, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Manchester — Department of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~35 worldwide. Broad MSc programmes; good industry links in Northern England.",
+        "url": "https://www.cs.manchester.ac.uk/study/",
+        "location": "Manchester, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Nottingham — Food production and biosciences",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Brewing and food biotechnology.",
+        "url": "https://www.nottingham.ac.uk/biosciences/",
+        "location": "Nottingham, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Nottingham — School of Biosciences (food-related MSc)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Food production management, brewing, and biotechnology routes.",
+        "url": "https://www.nottingham.ac.uk/biosciences/",
+        "location": "Nottingham, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Oxford — Department of Computer Science (graduate)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~5 worldwide. MSc Advanced Computer Science and DPhil; college membership applies.",
+        "url": "https://www.cs.ox.ac.uk/admissions/",
+        "location": "Oxford, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Reading — Department of Food and Nutritional Sciences",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "UK flagship for food and nutrition research; MSc Food Technology — Quality Assurance, Food Science, etc.",
+        "url": "https://www.reading.ac.uk/food-and-nutritional-sciences",
+        "location": "Reading, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Reading — Food and Nutritional Sciences",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Food science in the UK; MSc programmes in food science and technology.",
+        "url": "https://www.reading.ac.uk/food-and-nutritional-sciences",
+        "location": "Reading, England"
+      },
+      {
+        "type": "University",
+        "name": "University of Surrey — Department of Nutritional Sciences (food systems)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Nutrition, microbiome, and food-related MSc routes with placement year options on some programmes.",
+        "url": "https://www.surrey.ac.uk/school-biosciences-medicine",
+        "location": "Guildford, England"
+      },
+      {
+        "type": "Business school",
+        "name": "Warwick Business School — University of Warwick",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Triple-accredited; strong MSc in Business Analytics, Finance, and Management.",
+        "url": "https://www.wbs.ac.uk/",
+        "location": "Coventry, England"
+      }
+    ]
+  },
+  {
+    "country": "Finland",
+    "universities": [
+      {
+        "type": "Technical university",
+        "name": "Aalto University — Department of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "English MSc Computer Science, Communication, and Information Sciences; strong HCI and ML groups.",
+        "url": "https://www.aalto.fi/en/study-at-aalto/masters-programmes",
+        "location": "Espoo"
+      },
+      {
+        "type": "University",
+        "name": "University of Helsinki — Department of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Research MSc and doctoral routes; compare taught vs thesis programmes for international applicants.",
+        "url": "https://www.helsinki.fi/en/degree-finders/masters-programmes",
+        "location": "Helsinki"
+      },
+      {
+        "type": "University",
+        "name": "Tampere University — Computing Sciences",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Former TUT lineage; software, signal processing, and games research clusters.",
+        "url": "https://www.tuni.fi/en/study-with-us",
+        "location": "Tampere"
+      },
+      {
+        "type": "Technical university",
+        "name": "LUT University — Software Engineering / Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Smaller campus; English MSc options in software engineering and related ICT.",
+        "url": "https://www.lut.fi/en/study-at-lut",
+        "location": "Lappeenranta / Lahti"
+      },
+      {
+        "type": "University",
+        "name": "University of Helsinki — Faculty of Agriculture and Forestry (food sciences)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Agri-food research MSc routes (food economy, safety, sustainability); verify English-language intake per programme.",
+        "url": "https://www.helsinki.fi/en/faculty-agriculture-and-forestry",
+        "location": "Helsinki"
+      },
+      {
+        "type": "University",
+        "name": "University of Turku — Food Chemistry and Food Development",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Seafood, sensory science, and molecular nutrition angles in Faculty of Science.",
+        "url": "https://www.utu.fi/en/study-at-utu/masters-degree-programmes",
+        "location": "Turku"
+      }
+    ]
+  },
+  {
+    "country": "Netherlands",
+    "universities": [
+      {
+        "type": "University",
+        "name": "Delft University of Technology — Process & Energy (food-relevant process engineering)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~50 worldwide. Look for Chemical Engineering / Bioprocess tracks touching food process design.",
+        "url": "https://www.tudelft.nl/en/education/programmes/masters",
+        "location": "Delft"
+      },
+      {
+        "type": "University",
+        "name": "Eindhoven University of Technology (TU/e) — CS & graduate admissions",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~150 worldwide. High-tech Brainport region; many English-taught MSc programmes in CS-related fields.",
+        "url": "https://www.tue.nl/en/education/become-a-student/admission-and-enrollment/",
+        "location": "Eindhoven"
+      },
+      {
+        "type": "University",
+        "name": "HAS green academy — Food Innovation",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Applied sciences; food industry and supply-chain pathways in the Netherlands.",
+        "url": "https://www.has.nl/en/",
+        "location": "'s-Hertogenbosch / Venlo"
+      },
+      {
+        "type": "University",
+        "name": "HAS green academy — Food Innovation / Food Technology (BSc; pathways to industry)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Applied sciences; practical food innovation, agri-food chain, and entrepreneurship — compare with research MSc at WUR.",
+        "url": "https://www.has.nl/en/",
+        "location": "'s-Hertogenbosch / Venlo"
+      },
+      {
+        "type": "University",
+        "name": "HZ University of Applied Sciences — Food Technology",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Applied BSc/MSc routes; dairy technology, fermentation, and coastal food value chains — verify English intake per year.",
+        "url": "https://www.hz.nl/en/programmes/food-technology",
+        "location": "Vlissingen"
+      },
+      {
+        "type": "University",
+        "name": "Leiden University — LIACS (MSc Computer Science)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~80 worldwide. LIACS for CS and AI-oriented programmes.",
+        "url": "https://www.universiteitleiden.nl/en/education/study-programmes/master",
+        "location": "Leiden"
+      },
+      {
+        "type": "University",
+        "name": "Maastricht University — School of Business and Economics (SBE)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~200 worldwide. Problem-based learning; strong international business MSc portfolio.",
+        "url": "https://www.maastrichtuniversity.nl/education",
+        "location": "Maastricht"
+      },
+      {
+        "type": "University",
+        "name": "NIZO food research — careers & collaboration (industry-linked R&D)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Not a degree-granting university; world-class contract research for dairy, ingredients, and sensory science — useful for internship targets.",
+        "url": "https://www.nizo.com/",
+        "location": "Ede"
+      },
+      {
+        "type": "Business school",
+        "name": "Nyenrode Business University",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Private Dutch university; MBA and executive programmes with corporate network focus.",
+        "url": "https://www.nyenrode.nl/",
+        "location": "Breukelen"
+      },
+      {
+        "type": "University",
+        "name": "Radboud University Nijmegen — Institute for Computing and Information Sciences (iCIS)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~200 worldwide. Research-oriented MSc in Computer Science and AI specialisations.",
+        "url": "https://www.ru.nl/icis/",
+        "location": "Nijmegen"
+      },
+      {
+        "type": "Business school",
+        "name": "Rotterdam School of Management (RSM) — MSc / MBA",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Erasmus University QS (indicative): top ~150 worldwide; RSM triple accredited (AACSB, EQUIS, AMBA). GMAT/GRE and English tests typical.",
+        "url": "https://www.rsm.nl/education/",
+        "location": "Rotterdam"
+      },
+      {
+        "type": "University",
+        "name": "Tilburg University — School of Economics and Management (TiSEM)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~350 worldwide; economics and econometrics historically very strong in Europe.",
+        "url": "https://www.tilburguniversity.edu/education/masters-programmes",
+        "location": "Tilburg"
+      },
+      {
+        "type": "Technical university",
+        "name": "TU Delft — MSc Computer Science & Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS World University Rankings (indicative): top ~50 worldwide. Strong systems, HCI, and software engineering tracks; check English quotas and two annual intakes.",
+        "url": "https://www.tudelft.nl/en/education/programmes/masters/cs/msc-computer-science",
+        "location": "Delft"
+      },
+      {
+        "type": "University",
+        "name": "University of Amsterdam — Amsterdam Business School (ABS)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~55 worldwide for parent university. MSc Finance, Business Administration, and MBA tracks.",
+        "url": "https://www.uva.nl/en/about-the-uva/faculties/amsterdam-business-school/amsterdam-business-school.html",
+        "location": "Amsterdam"
+      },
+      {
+        "type": "University",
+        "name": "University of Amsterdam — MSc Chemistry (food / analytical tracks)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~55 worldwide. Analytical and molecular science routes relevant to food R&D and quality labs.",
+        "url": "https://www.uva.nl/en/programmes/masters/chemistry/chemistry.html",
+        "location": "Amsterdam"
+      },
+      {
+        "type": "University",
+        "name": "University of Amsterdam — MSc Software Engineering / AI",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~55 worldwide. Faculty of Science; verify selection/numerus fixus for specific programmes.",
+        "url": "https://www.uva.nl/en/programmes/masters/software-engineering/software-engineering.html",
+        "location": "Amsterdam"
+      },
+      {
+        "type": "University",
+        "name": "University of Groningen — Faculty of Economics and Business (FEB)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~150 worldwide. Research MSc in economics, finance, and international business.",
+        "url": "https://www.rug.nl/feb/education/",
+        "location": "Groningen"
+      },
+      {
+        "type": "University",
+        "name": "University of Groningen — MSc Computing Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~150 worldwide. Affordable student city; strong CS, computational intelligence, and HPC groups.",
+        "url": "https://www.rug.nl/masters/computing-science/",
+        "location": "Groningen"
+      },
+      {
+        "type": "University",
+        "name": "University of Twente — MSc Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~250 worldwide. Campus university; strong security and software engineering profile.",
+        "url": "https://www.utwente.nl/en/education/master/programmes/computer-science/",
+        "location": "Enschede"
+      },
+      {
+        "type": "University",
+        "name": "Utrecht University — Graduate School of Life Sciences (food-related MSc)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Science for Sustainable Foods, Biology of Food-associated Microbes, and related tracks.",
+        "url": "https://www.uu.nl/en/masters",
+        "location": "Utrecht"
+      },
+      {
+        "type": "University",
+        "name": "Utrecht University — Graduate School of Life Sciences (food-related)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Science for Sustainable Foods and related MSc programmes.",
+        "url": "https://www.uu.nl/en/masters",
+        "location": "Utrecht"
+      },
+      {
+        "type": "University",
+        "name": "Utrecht University — Graduate School of Natural Sciences (CS-related MSc)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~100 worldwide. Browse Computing Sciences and interdisciplinary data / AI masters.",
+        "url": "https://www.uu.nl/en/masters",
+        "location": "Utrecht"
+      },
+      {
+        "type": "University",
+        "name": "Vrije Universiteit Amsterdam (VU) — MSc Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~200 worldwide. Joint degrees with UvA possible for some tracks — read programme pages.",
+        "url": "https://vu.nl/en/education/master/computer-science",
+        "location": "Amsterdam"
+      },
+      {
+        "type": "University",
+        "name": "Wageningen University & Research — MSc Food Quality Management",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Links quality assurance, supply chain, and consumer science; pairs well with EU food law coursework.",
+        "url": "https://www.wur.nl/en/education-programmes/master/food-quality-management.htm",
+        "location": "Wageningen"
+      },
+      {
+        "type": "University",
+        "name": "Wageningen University & Research — MSc Food Safety",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Joint programme options with partner universities in EU; strong regulatory and microbiology focus.",
+        "url": "https://www.wur.nl/en/education-programmes/master/food-safety.htm",
+        "location": "Wageningen"
+      },
+      {
+        "type": "University",
+        "name": "Wageningen University & Research — MSc Food Technology",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS Agriculture & Forestry often ranked #1 worldwide; overall university QS (indicative): top ~150. Flagship for food science, product design, and safety.",
+        "url": "https://www.wur.nl/en/education-programmes/master/food-technology.htm",
+        "location": "Wageningen"
+      }
+    ]
+  },
+  {
+    "country": "Spain",
+    "universities": [
+      {
+        "type": "Technical university",
+        "name": "Universitat Politècnica de Catalunya (UPC) — Barcelona School of Informatics (FIB)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Large CS faculty; many MSc tracks in English — confirm language per concentration.",
+        "url": "https://www.upc.edu/en/masters",
+        "location": "Barcelona"
+      },
+      {
+        "type": "University",
+        "name": "Universidad Politécnica de Madrid — ETSI Informáticos",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Flagship technical university in Spain; MSc Artificial Intelligence and formal CS tracks.",
+        "url": "https://www.upm.es/internacional",
+        "location": "Madrid"
+      },
+      {
+        "type": "University",
+        "name": "Universidad Carlos III de Madrid — Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Young university with growing CS MSc portfolio; Leganés / Getafe campuses.",
+        "url": "https://www.uc3m.es/ss/Satellite/Postgrado/en/",
+        "location": "Madrid region"
+      },
+      {
+        "type": "University",
+        "name": "Universitat Politècnica de València — Informatics",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Strong engineering faculty; English options vary — check programme sheets.",
+        "url": "https://www.upv.es/en/postgraduate/",
+        "location": "València"
+      },
+      {
+        "type": "University",
+        "name": "University of Barcelona — Faculty of Pharmacy and Food Sciences",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Food science and nutrition MSc programmes; Spanish proficiency often expected — verify English tracks.",
+        "url": "https://web.ub.edu/en/web/estudis/university-masters-degree",
+        "location": "Barcelona"
+      },
+      {
+        "type": "University",
+        "name": "Universitat Politècnica de València — Food Biotechnology",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Engineering-led food science and biotechnology MSc routes.",
+        "url": "https://www.upv.es/en/postgraduate/",
+        "location": "València"
+      }
+    ]
+  },
+  {
+    "country": "Italy",
+    "universities": [
+      {
+        "type": "Technical university",
+        "name": "Politecnico di Milano — Computer Science and Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS engineering band often top ~25 worldwide (indicative); English MSc programmes in CS and AI.",
+        "url": "https://www.polimi.it/en/education/laurea-magistrale-programmes-equivalent-to-master-of-science",
+        "location": "Milan"
+      },
+      {
+        "type": "Technical university",
+        "name": "Politecnico di Torino — Department of Control and Computer Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Automotive and aerospace adjacent computing research; English MSc options.",
+        "url": "https://www.polito.it/en/education/programmes",
+        "location": "Turin"
+      },
+      {
+        "type": "University",
+        "name": "Sapienza University of Rome — Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Large department; MSc Informatica and specialised masters — language requirements vary.",
+        "url": "https://www.uniroma1.it/en/pagina-strutturale/courses",
+        "location": "Rome"
+      },
+      {
+        "type": "University",
+        "name": "University of Bologna — Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Historic university; CS MSc in Bologna and Cesena hubs.",
+        "url": "https://www.unibo.it/en/study/second-cycle-degree/programme",
+        "location": "Bologna"
+      },
+      {
+        "type": "University",
+        "name": "University of Bologna — Food Science and Technology (CESENA campus)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Product innovation and quality; strong Italian food-industry links.",
+        "url": "https://www.unibo.it/en/study/second-cycle-degree/programme",
+        "location": "Cesena"
+      },
+      {
+        "type": "University",
+        "name": "University of Naples Federico II — Food Science",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Southern Italy hub for food science MSc and doctoral routes.",
+        "url": "https://www.unina.it/",
+        "location": "Naples"
+      }
+    ]
+  },
+  {
+    "country": "Sweden",
+    "universities": [
+      {
+        "type": "Technical university",
+        "name": "KTH Royal Institute of Technology — School of Electrical Engineering and Computer Science (EECS)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS engineering band often top ~75 worldwide (indicative). Large MSc portfolio in CS, ML, and embedded systems; tuition rules for non-EU — verify annually.",
+        "url": "https://www.kth.se/en/eecs",
+        "location": "Stockholm"
+      },
+      {
+        "type": "Technical university",
+        "name": "Chalmers University of Technology — Computer Science and Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Strong industry ties in Gothenburg; MSc programmes in CS, data science, and software engineering — English widely used at master’s level.",
+        "url": "https://www.chalmers.se/en/education/find-masters-programme/",
+        "location": "Gothenburg"
+      },
+      {
+        "type": "University",
+        "name": "Lund University — Department of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Research-intensive department; MSc Computer Science and AI-related specialisations; compact student city with lower cost vs Stockholm.",
+        "url": "https://www.lunduniversity.lu.se/lubas/subjects/computer-science",
+        "location": "Lund"
+      },
+      {
+        "type": "University",
+        "name": "Linköping University — Department of Computer and Information Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Known for AI, visualization, and software engineering research; several English-taught MSc programmes.",
+        "url": "https://liu.se/en/education/program/program-by-school-and-topic",
+        "location": "Linköping"
+      },
+      {
+        "type": "University",
+        "name": "Uppsala University — Department of Information Technology",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Historic university with active CS research; MSc Computer Science — check scholarship and housing timelines early.",
+        "url": "https://www.it.uu.se/education",
+        "location": "Uppsala"
+      },
+      {
+        "type": "University",
+        "name": "Swedish University of Agricultural Sciences (SLU) — food science",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Nordic hub for agriculture and food; MSc programmes in food science, nutrition, and sustainable food systems across Uppsala / Alnarp / Umeå campuses.",
+        "url": "https://www.slu.se/en/education/programmes-courses/find-programmes-and-courses/",
+        "location": "Uppsala"
+      },
+      {
+        "type": "University",
+        "name": "Lund University — Food Technology and Nutrition (LTH)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Engineering faculty route into product innovation, processing, and packaging; strong collaboration with regional food industry.",
+        "url": "https://www.lth.se/english/study-at-lth/masters-programmes-in-english/",
+        "location": "Lund"
+      }
+    ]
+  },
+  {
+    "country": "Germany",
+    "universities": [
+      {
+        "type": "University",
+        "name": "ESMT Berlin",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Private non-profit business school; MBA and Master in Analytics; strong tech and startup ecosystem links.",
+        "url": "https://www.esmt.berlin/",
+        "location": "Berlin"
+      },
+      {
+        "type": "University",
+        "name": "Frankfurt School of Finance & Management",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Finance-heavy MBA/MSc; ECB proximity; English-taught flagship programmes.",
+        "url": "https://www.frankfurt-school.de/",
+        "location": "Frankfurt"
+      },
+      {
+        "type": "Technical university",
+        "name": "Karlsruhe Institute of Technology (KIT) — Faculty of Informatics",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~120 worldwide. Informatics, cybersecurity, and HPC; Cyber Valley industry links.",
+        "url": "https://www.kit.edu/english/",
+        "location": "Karlsruhe"
+      },
+      {
+        "type": "University",
+        "name": "LMU Munich — Institute for Informatics (graduate)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~60 worldwide. Research MSc/PhD; compare with TUM for English-taught options.",
+        "url": "https://www.en.uni-muenchen.de/students/index.html",
+        "location": "Munich"
+      },
+      {
+        "type": "Business school",
+        "name": "Mannheim Business School — University of Mannheim",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "University of Mannheim QS (indicative): top ~350 worldwide; MBS consistently top-tier in European rankings.",
+        "url": "https://www.bschool.mannheim.de/",
+        "location": "Mannheim"
+      },
+      {
+        "type": "University",
+        "name": "RWTH Aachen University — Faculty of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~110 worldwide. Strong in CS, embedded systems, and automotive-adjacent software.",
+        "url": "https://www.rwth-aachen.de/cms/root/studium/~een/Studierende/",
+        "location": "Aachen"
+      },
+      {
+        "type": "Technical university",
+        "name": "Technical University of Munich — TUM School of Life Sciences Weihenstephan",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "TUM QS (indicative): top ~25 worldwide. Weihenstephan is a European hub for brewing science, food technology, nutrition, and sustainable food systems.",
+        "url": "https://www.ls.tum.de/en/home/",
+        "location": "Freising"
+      },
+      {
+        "type": "Technical university",
+        "name": "Technical University of Munich (TUM) — Department of Informatics",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~25 worldwide. Elite informatics; verify language of instruction (English vs German) per programme.",
+        "url": "https://www.tum.de/en/studies/degree-programs",
+        "location": "Munich / Garching"
+      },
+      {
+        "type": "Technical university",
+        "name": "Technische Universität Berlin — Food-relevant process / life-science MSc routes",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~150 worldwide. Check Faculty III process sciences for food-relevant MSc pathways.",
+        "url": "https://www.tu.berlin/en/studying/",
+        "location": "Berlin"
+      },
+      {
+        "type": "Technical university",
+        "name": "TU Berlin — Faculty IV Electrical Engineering and Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~150 worldwide. Growing English MSc portfolio in CS-related fields.",
+        "url": "https://www.tu.berlin/en/studying/",
+        "location": "Berlin"
+      },
+      {
+        "type": "University",
+        "name": "TUM School of Life Sciences Weihenstephan — Food / nutrition graduate programmes",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "TUM QS (indicative): top ~25 worldwide. Food science, nutrition, and beverage technology.",
+        "url": "https://www.ls.tum.de/en/home/",
+        "location": "Freising"
+      },
+      {
+        "type": "University",
+        "name": "University of Bonn — Agricultural and nutritional sciences",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~230 worldwide. Food-related life sciences graduate tracks.",
+        "url": "https://www.uni-bonn.de/en/study",
+        "location": "Bonn"
+      },
+      {
+        "type": "University",
+        "name": "University of Bonn — Faculty of Agriculture (nutrition & food sciences)",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~230 worldwide. Graduate routes in nutritional sciences and food-related life sciences.",
+        "url": "https://www.uni-bonn.de/en/study",
+        "location": "Bonn"
+      },
+      {
+        "type": "University",
+        "name": "University of Hohenheim — Food Science and Biotechnology",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "QS (indicative): top ~350 worldwide; very strong in agricultural economics, food security, and crop-to-food research.",
+        "url": "https://www.uni-hohenheim.de/en",
+        "location": "Stuttgart (south)"
+      },
+      {
+        "type": "University",
+        "name": "University of Stuttgart — Faculty of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "QS (indicative): top ~320 worldwide. Simulation science and automotive software ecosystem.",
+        "url": "https://www.uni-stuttgart.de/en/study/",
+        "location": "Stuttgart"
+      },
+      {
+        "type": "Business school",
+        "name": "WHU — Otto Beisheim School of Management",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Private German business school; MBA, MSc, and Kellogg-WHU EMBA; triple-accredited profile.",
+        "url": "https://www.whu.edu/",
+        "location": "Vallendar"
+      }
+    ]
+  },
+  {
+    "country": "Turkey",
+    "universities": [
+      {
+        "type": "Technical university",
+        "name": "Middle East Technical University (METU) — Computer Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "English-medium engineering education in Ankara; competitive admissions for international students.",
+        "url": "https://www.metu.edu.tr/",
+        "location": "Ankara"
+      },
+      {
+        "type": "University",
+        "name": "Bilkent University — Computer Science / Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Private English-language university; MSc and PhD in CS with theory and systems strength.",
+        "url": "https://www.cs.bilkent.edu.tr/",
+        "location": "Ankara"
+      },
+      {
+        "type": "University",
+        "name": "Koç University — Computer Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Istanbul campus; graduate programmes in CS and AI-related fields (English).",
+        "url": "https://www.ku.edu.tr/en/",
+        "location": "Istanbul"
+      },
+      {
+        "type": "Technical university",
+        "name": "Istanbul Technical University (ITU) — Computer Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Historic technical university; graduate CS routes — verify English vs Turkish tracks.",
+        "url": "https://www.itu.edu.tr/en/",
+        "location": "Istanbul"
+      },
+      {
+        "type": "Technical university",
+        "name": "Middle East Technical University (METU) — Food Engineering",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Food process engineering, biosystems, and safety — English undergraduate legacy; confirm MSc language.",
+        "url": "https://www.metu.edu.tr/",
+        "location": "Ankara"
+      },
+      {
+        "type": "University",
+        "name": "Hacettepe University — Food Engineering",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Large public university; food engineering MSc aligned with Turkish industry standards.",
+        "url": "https://www.hacettepe.edu.tr/english",
+        "location": "Ankara"
+      }
+    ]
+  },
+  {
+    "country": "Austria",
+    "universities": [
+      {
+        "type": "Technical university",
+        "name": "TU Wien — Faculty of Informatics",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Largest informatics faculty in Austria; strong algorithms, security, and visual computing; English-taught MSc Informatics and related programmes.",
+        "url": "https://informatics.tuwien.ac.at/studies/",
+        "location": "Vienna"
+      },
+      {
+        "type": "Technical university",
+        "name": "TU Graz — Institute of Computer Graphics and Vision (informatics)",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Research university with English MSc Computer Science; strengths in computer vision, HCI, and software technology.",
+        "url": "https://www.tugraz.at/en/study-and-teaching/",
+        "location": "Graz"
+      },
+      {
+        "type": "University",
+        "name": "University of Vienna — Department of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Theoretical and applied CS; MSc Data Science and MSc in CS tracks — confirm English offerings per intake.",
+        "url": "https://cs.univie.ac.at/",
+        "location": "Vienna"
+      },
+      {
+        "type": "University",
+        "name": "Johannes Kepler University Linz — Institute for Networks and Security",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "JKU informatics hub in Upper Austria; cybersecurity, networks, and AI; English MSc Artificial Intelligence and related degrees.",
+        "url": "https://www.jku.at/en/degree-programs/",
+        "location": "Linz"
+      },
+      {
+        "type": "University",
+        "name": "University of Natural Resources and Life Sciences, Vienna (BOKU) — food science and technology",
+        "fields": [
+          "Food Science & Food Technology"
+        ],
+        "notes": "Austria’s leading university for agriculture and food; food technology, processing, and product development with strong industry and EU regulatory context; browse MSc routes on the study pages.",
+        "url": "https://boku.ac.at/en/",
+        "location": "Vienna"
+      }
+    ]
+  },
+  {
+    "country": "Australia",
+    "universities": [
+      {
+        "type": "University",
+        "name": "Australian National University (ANU) — College of Engineering, Computing & Cybernetics",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Research-intensive; strong theory and systems groups.",
+        "url": "https://www.anu.edu.au/study/apply",
+        "location": "Canberra, ACT"
+      },
+      {
+        "type": "University",
+        "name": "Monash University — Faculty of Information Technology",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Multiple campuses; strong industry graduate programmes.",
+        "url": "https://www.monash.edu/it",
+        "location": "Melbourne, Victoria"
+      },
+      {
+        "type": "University",
+        "name": "University of Adelaide — School of Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Smaller city cost-of-living vs Sydney/Melbourne; growing defence and space tech ecosystem.",
+        "url": "https://www.adelaide.edu.au/degree-finder/",
+        "location": "Adelaide, South Australia"
+      },
+      {
+        "type": "University",
+        "name": "University of Melbourne — School of Computing and Information Systems",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Group of Eight; competitive MSc and MPhil routes — verify fee status and English tests.",
+        "url": "https://study.unimelb.edu.au/find/courses/graduate/",
+        "location": "Melbourne, Victoria"
+      },
+      {
+        "type": "University",
+        "name": "University of Queensland (UQ) — School of Electrical Engineering and Computer Science",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Go8; verify scholarship rounds for international applicants.",
+        "url": "https://study.uq.edu.au/study-options/programs",
+        "location": "Brisbane, Queensland"
+      },
+      {
+        "type": "University",
+        "name": "University of Sydney — Computer Science postgraduate",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Broad ICT faculty; compare MCS vs research degrees.",
+        "url": "https://www.sydney.edu.au/courses/search/?course-level=postgraduate",
+        "location": "Sydney, NSW"
+      },
+      {
+        "type": "University",
+        "name": "UNSW Sydney — School of Computer Science and Engineering",
+        "fields": [
+          "Computer Science & Engineering"
+        ],
+        "notes": "Large postgraduate cohort; check programme-specific credit requirements.",
+        "url": "https://www.unsw.edu.au/engineering/our-schools/school-of-computer-science-and-engineering",
+        "location": "Sydney, NSW"
+      }
+    ]
+  }
+]

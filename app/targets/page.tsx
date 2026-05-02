@@ -7,11 +7,14 @@ import { getMessages } from "@/lib/i18n/messages";
 import { t } from "@/lib/i18n/t";
 import { getOptionSets } from "@/lib/resume-builder/options";
 import { listResumes } from "@/lib/resume-builder/resumes";
+import { schoolTypeLabel } from "@/lib/i18n/school-type-label";
+import { canonicalUniversityCountry } from "@/lib/resume-builder/university-catalog";
 import {
   getResumeTargetList,
   getUniversityTargetList,
   listUniversityFieldsForCountry,
-  listUniversityTargetLists
+  ORDERED_UNIVERSITY_COUNTRIES,
+  isAllowedUniversityCountry
 } from "@/lib/resume-builder/targets";
 
 type TargetKind = "work" | "universities";
@@ -31,10 +34,9 @@ export default async function TargetsPage({ searchParams }: TargetsPageProps) {
   const { country, field, kind: kindRaw } = await searchParams;
   const kind: TargetKind = kindRaw === "universities" ? "universities" : "work";
 
-  const [options, resumes, uniLists] = await Promise.all([
+  const [options, resumes] = await Promise.all([
     Promise.resolve(getOptionSets()),
-    Promise.resolve(listResumes(user.id)),
-    Promise.resolve(listUniversityTargetLists())
+    Promise.resolve(listResumes(user.id))
   ]);
 
   const countrySet = Array.from(new Set([...options.countries, ...resumes.map((r) => r.country)].filter(Boolean)));
@@ -98,9 +100,11 @@ export default async function TargetsPage({ searchParams }: TargetsPageProps) {
     );
   }
 
-  const defaultUniCountry = uniLists[0]?.country || defaultCountry;
-  const uniCountry = country?.trim() || defaultUniCountry;
-  const countries = Array.from(new Set([...countrySet, ...uniLists.map((u) => u.country), uniCountry].filter(Boolean)));
+  const defaultUniCountry = ORDERED_UNIVERSITY_COUNTRIES[0];
+  const countryNorm = country?.trim() ? canonicalUniversityCountry(country.trim()) : "";
+  const uniCountry =
+    countryNorm && isAllowedUniversityCountry(countryNorm) ? countryNorm : defaultUniCountry;
+  const uniCountriesOrdered = [...ORDERED_UNIVERSITY_COUNTRIES];
   const fields = listUniversityFieldsForCountry(uniCountry);
   const fieldParam = field?.trim() || "";
   const selectedField = fieldParam || fields[0] || "Computer Science & Engineering";
@@ -122,7 +126,7 @@ export default async function TargetsPage({ searchParams }: TargetsPageProps) {
             <label className="block min-w-56">
               <span className="text-sm font-semibold text-slate-200">{tp.country}</span>
               <select name="country" defaultValue={uniCountry} className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none focus:border-cyan-300">
-                {countries.map((item) => (
+                {uniCountriesOrdered.map((item) => (
                   <option key={item} value={item}>
                     {item}
                   </option>
@@ -162,7 +166,14 @@ export default async function TargetsPage({ searchParams }: TargetsPageProps) {
             </div>
           )}
           {uniList.targets.map((target, index) => (
-            <TargetCard key={`${target.name}-${index}`} target={target} icon={<GraduationCap />} websiteLabel={tp.website} emailLabel={tp.email} />
+            <TargetCard
+              key={`${target.name}-${index}`}
+              target={target}
+              icon={<GraduationCap />}
+              websiteLabel={tp.website}
+              emailLabel={tp.email}
+              typeBadgeLabel={schoolTypeLabel(m, target.type)}
+            />
           ))}
         </section>
       </section>
@@ -193,18 +204,21 @@ function TargetCard({
   target,
   icon,
   websiteLabel,
-  emailLabel
+  emailLabel,
+  typeBadgeLabel
 }: {
   target: { type: string; name: string; url: string; email: string; location: string; notes: string; tags: string[] };
   icon: React.ReactNode;
   websiteLabel: string;
   emailLabel: string;
+  /** When set (e.g. localized school category), shown instead of raw `target.type`. */
+  typeBadgeLabel?: string;
 }) {
   return (
     <article className="glass rounded-[2rem] p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="rounded-2xl bg-cyan-300/10 p-3 text-cyan-200">{icon}</div>
-        <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-slate-200">{target.type}</span>
+        <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-slate-200">{typeBadgeLabel ?? target.type}</span>
       </div>
       <h2 className="mt-4 text-2xl font-black">{target.name}</h2>
       {target.location && (

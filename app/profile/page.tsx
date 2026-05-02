@@ -73,46 +73,48 @@ export default async function ProfilePage({ searchParams }: ProfilePageProps) {
           </label>
 
           <div className="border-t border-white/10 pt-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{m.profile.aiEyebrow}</p>
-            <label className="mt-3 block">
-              <span className="text-sm font-semibold text-slate-200">{m.profile.aiProvider}</span>
-              <select
-                name="aiProvider"
-                defaultValue={ai.aiProvider}
-                className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none focus:border-cyan-300"
-              >
-                <option value="auto">{m.profile.aiProviderAuto}</option>
-                <option value="gemini">{m.profile.aiProviderGemini}</option>
-                <option value="openai">{m.profile.aiProviderOpenAI}</option>
-              </select>
-            </label>
-            <p className="mt-2 text-xs leading-relaxed text-slate-400">{m.profile.aiProviderHelp}</p>
-            <label className="mt-3 block">
-              <span className="text-sm font-semibold text-slate-200">{m.profile.aiModel}</span>
-              <input
-                name="aiModel"
-                type="text"
-                defaultValue={ai.aiModel}
-                placeholder={m.profile.aiModelPlaceholder}
-                autoComplete="off"
-                className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none focus:border-cyan-300"
-              />
-            </label>
-            <label className="mt-4 block">
-              <span className="text-sm font-semibold text-slate-200">{m.profile.aiApiKey}</span>
-              <input
-                name="aiApiKey"
-                type="password"
-                autoComplete="new-password"
-                placeholder={m.profile.aiApiKeyPlaceholder}
-                className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none focus:border-cyan-300"
-              />
-            </label>
-            {ai.hasStoredApiKey && <p className="mt-2 text-xs text-slate-400">{m.profile.aiKeyStoredHint}</p>}
-            <label className="mt-4 flex cursor-pointer items-center gap-3 text-sm text-slate-200">
-              <input name="clearAiKey" type="checkbox" value="1" className="size-4 rounded border-white/20 bg-slate-950 accent-cyan-300" />
-              {m.profile.aiClearKey}
-            </label>
+            <div className="rounded-2xl border border-cyan-400/25 bg-gradient-to-b from-cyan-400/[0.07] to-transparent p-4 shadow-[0_0_40px_-12px_rgba(34,211,238,0.28)] ring-1 ring-cyan-400/15 ring-inset">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">{m.profile.aiEyebrow}</p>
+              <label className="mt-3 block">
+                <span className="text-sm font-semibold text-slate-200">{m.profile.aiProvider}</span>
+                <select
+                  name="aiProvider"
+                  defaultValue={ai.aiProvider}
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none focus:border-cyan-300"
+                >
+                  <option value="auto">{m.profile.aiProviderAuto}</option>
+                  <option value="gemini">{m.profile.aiProviderGemini}</option>
+                  <option value="openai">{m.profile.aiProviderOpenAI}</option>
+                </select>
+              </label>
+              <p className="mt-2 text-xs leading-relaxed text-slate-400">{m.profile.aiProviderHelp}</p>
+              <label className="mt-3 block">
+                <span className="text-sm font-semibold text-slate-200">{m.profile.aiModel}</span>
+                <input
+                  name="aiModel"
+                  type="text"
+                  defaultValue={ai.aiModel}
+                  placeholder={m.profile.aiModelPlaceholder}
+                  autoComplete="off"
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none focus:border-cyan-300"
+                />
+              </label>
+              <label className="mt-4 block">
+                <span className="text-sm font-semibold text-slate-200">{m.profile.aiApiKey}</span>
+                <input
+                  name="aiApiKey"
+                  type="password"
+                  autoComplete="new-password"
+                  placeholder={m.profile.aiApiKeyPlaceholder}
+                  className="mt-2 w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-white outline-none focus:border-cyan-300"
+                />
+              </label>
+              {ai.hasStoredApiKey && <p className="mt-2 text-xs text-slate-400">{m.profile.aiKeyStoredHint}</p>}
+              <label className="mt-4 flex cursor-pointer items-center gap-3 text-sm text-slate-200">
+                <input name="clearAiKey" type="checkbox" value="1" className="size-4 rounded border-white/20 bg-slate-950 accent-cyan-300" />
+                {m.profile.aiClearKey}
+              </label>
+            </div>
           </div>
 
           <button

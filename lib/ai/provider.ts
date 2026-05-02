@@ -36,16 +36,17 @@ export function resolveLlmApiBase(apiKey: string, preference: AiProviderPreferen
   const custom = process.env.LLM_API_BASE?.trim().replace(/\/$/, "");
   if (custom) return custom;
 
+  const key = apiKey.trim();
+  /** Google AI Studio / Gemini keys always start with "AIza". Must hit Google's OpenAI-compat host, not api.openai.com (even if profile says OpenAI). */
+  if (key.startsWith("AIza")) {
+    return GEMINI_OPENAI_COMPAT_BASE;
+  }
+
   if (preference === "gemini") return GEMINI_OPENAI_COMPAT_BASE;
   if (preference === "openai") return OPENAI_DEFAULT_BASE;
 
   const provider = process.env.LLM_PROVIDER?.trim().toLowerCase();
   if (provider === "gemini" || provider === "google") {
-    return GEMINI_OPENAI_COMPAT_BASE;
-  }
-
-  const key = apiKey.trim();
-  if (key.startsWith("AIza")) {
     return GEMINI_OPENAI_COMPAT_BASE;
   }
 

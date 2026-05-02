@@ -1,0 +1,758 @@
+[
+  {
+    "country": "Netherlands",
+    "targets": [
+      {
+        "type": "Recruiter",
+        "name": "Hays Netherlands - IT",
+        "url": "https://www.hays.nl/en/job-sectors/technology",
+        "email": "",
+        "location": "Amsterdam / Netherlands",
+        "notes": "Useful for senior technology, software architecture, and IT leadership roles.",
+        "tags": [
+          "recruiter",
+          "technology",
+          "senior roles"
+        ]
+      },
+      {
+        "type": "Recruiter",
+        "name": "Michael Page Netherlands - Technology",
+        "url": "https://www.michaelpage.nl/en/jobs/technology",
+        "email": "",
+        "location": "Netherlands",
+        "notes": "Search and apply for technology leadership and software roles.",
+        "tags": [
+          "recruiter",
+          "technology"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "LinkedIn Jobs Netherlands",
+        "url": "https://www.linkedin.com/jobs/search/?location=Netherlands&keywords=Software%20Architect",
+        "email": "",
+        "location": "Netherlands",
+        "notes": "Use targeted searches for Software Architect, Technical Lead, and Backend Architect.",
+        "tags": [
+          "job board",
+          "software architect"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "IamExpat Jobs",
+        "url": "https://www.iamexpat.nl/career/jobs-netherlands",
+        "email": "",
+        "location": "Netherlands",
+        "notes": "International-friendly job board with English-language roles.",
+        "tags": [
+          "job board",
+          "expat"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Booking.com Careers",
+        "url": "https://careers.booking.com/",
+        "email": "",
+        "location": "Amsterdam",
+        "notes": "Large international tech employer. Watch architecture, platform, and backend roles.",
+        "tags": [
+          "company",
+          "tech",
+          "platform"
+        ]
+      },
+      {
+        "type": "Recruiter",
+        "name": "Robert Half Netherlands — Technology",
+        "url": "https://www.roberthalf.nl/en/jobs/technology",
+        "email": "",
+        "location": "Netherlands",
+        "notes": "Contract and permanent IT roles; filter Amsterdam, Rotterdam, Utrecht, hybrid.",
+        "tags": [
+          "recruiter",
+          "technology",
+          "contract"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Indeed Netherlands — tech",
+        "url": "https://www.indeed.nl/",
+        "email": "",
+        "location": "Netherlands",
+        "notes": "High volume; refine English-language filters and salary where listed.",
+        "tags": [
+          "job board",
+          "Indeed"
+        ]
+      },
+      {
+        "type": "Government",
+        "name": "werk.nl (UWV) — official vacancies NL",
+        "url": "https://www.werk.nl/",
+        "email": "",
+        "location": "Netherlands",
+        "notes": "Official Dutch public employment channel; useful alongside commercial boards.",
+        "tags": [
+          "official",
+          "Netherlands"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Glassdoor — Netherlands jobs",
+        "url": "https://www.glassdoor.nl/Job/netherlands-Software-architect-SRCH_IL.htm",
+        "email": "",
+        "location": "Netherlands",
+        "notes": "Company reviews and salary insights alongside listings.",
+        "tags": [
+          "job board",
+          "research"
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Canada",
+    "targets": [
+      {
+        "type": "Recruiter",
+        "name": "Robert Half Canada - Technology",
+        "url": "https://www.roberthalf.com/ca/en/jobs/technology",
+        "email": "",
+        "location": "Canada",
+        "notes": "Technology recruitment across Canadian provinces.",
+        "tags": [
+          "recruiter",
+          "technology"
+        ]
+      },
+      {
+        "type": "Recruiter",
+        "name": "Hays Canada - Technology",
+        "url": "https://www.hays.ca/technology",
+        "email": "",
+        "location": "Canada",
+        "notes": "Useful for senior IT, architecture, and infrastructure roles.",
+        "tags": [
+          "recruiter",
+          "technology",
+          "senior roles"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Job Bank Canada",
+        "url": "https://www.jobbank.gc.ca/",
+        "email": "",
+        "location": "Canada",
+        "notes": "Official Canadian job board. Search by NOC/role and province.",
+        "tags": [
+          "job board",
+          "official"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "LinkedIn Jobs Canada",
+        "url": "https://www.linkedin.com/jobs/search/?location=Canada&keywords=Software%20Architect",
+        "email": "",
+        "location": "Canada",
+        "notes": "Use searches for Software Architect, Technical Lead, Backend Architect, and Engineering Manager.",
+        "tags": [
+          "job board",
+          "software architect"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Shopify Careers",
+        "url": "https://www.shopify.com/careers",
+        "email": "",
+        "location": "Canada / Remote",
+        "notes": "Watch senior backend, platform, architecture, and engineering leadership roles.",
+        "tags": [
+          "company",
+          "remote",
+          "platform"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Indeed Canada — technology",
+        "url": "https://ca.indeed.com/",
+        "email": "",
+        "location": "Canada",
+        "notes": "Filter by province, remote, and salary band.",
+        "tags": [
+          "job board",
+          "Indeed"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Glassdoor Canada",
+        "url": "https://www.glassdoor.ca/",
+        "email": "",
+        "location": "Canada",
+        "notes": "Combine listings with interview and compensation signals.",
+        "tags": [
+          "job board",
+          "research"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Ericsson Canada careers",
+        "url": "https://www.ericsson.com/en/careers",
+        "email": "",
+        "location": "Canada / Global",
+        "notes": "Telecom and cloud infrastructure; senior software and architecture tracks.",
+        "tags": [
+          "company",
+          "telecom",
+          "infrastructure"
+        ]
+      }
+    ]
+  },
+  {
+    "country": "United States",
+    "targets": [
+      {
+        "type": "Recruiter",
+        "name": "Robert Half — Technology & IT staffing",
+        "url": "https://www.roberthalf.com/us/en/jobs/technology",
+        "email": "",
+        "location": "United States",
+        "notes": "National technology and IT contract / permanent placement; filter by metro and seniority.",
+        "tags": [
+          "recruiter",
+          "technology",
+          "US"
+        ]
+      },
+      {
+        "type": "Recruiter",
+        "name": "Hays US — Technology",
+        "url": "https://www.hays.com/us/technology",
+        "email": "",
+        "location": "United States",
+        "notes": "Enterprise and senior engineering roles; useful for architecture and leadership searches.",
+        "tags": [
+          "recruiter",
+          "technology"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "LinkedIn Jobs — United States",
+        "url": "https://www.linkedin.com/jobs/search/?location=United%20States&keywords=Software%20Architect",
+        "email": "",
+        "location": "United States",
+        "notes": "Broad coverage; combine keywords (Staff Engineer, Principal, Architect) with visa filter if needed.",
+        "tags": [
+          "job board",
+          "LinkedIn"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Indeed — US technology jobs",
+        "url": "https://www.indeed.com/",
+        "email": "",
+        "location": "United States",
+        "notes": "High volume; refine by salary estimate, remote, and company size.",
+        "tags": [
+          "job board",
+          "Indeed"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Built In — US tech hubs",
+        "url": "https://builtin.com/jobs",
+        "email": "",
+        "location": "US tech cities",
+        "notes": "Startup and scale-up heavy; good for senior IC and lead roles in SF, NYC, Austin, Seattle, etc.",
+        "tags": [
+          "job board",
+          "startups"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Amazon Jobs (US)",
+        "url": "https://www.amazon.jobs/en/search?base_query=&loc_query=United+States",
+        "email": "",
+        "location": "United States / Remote",
+        "notes": "Large pipeline for SDE, systems, and principal engineer levels; check team and org before applying.",
+        "tags": [
+          "company",
+          "FAANG",
+          "scale"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Dice — technology professionals",
+        "url": "https://www.dice.com/",
+        "email": "",
+        "location": "United States",
+        "notes": "Tech-focused board; strong for contract and full-time engineering.",
+        "tags": [
+          "job board",
+          "technology"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Levels.fyi jobs — compensation-aware search",
+        "url": "https://www.levels.fyi/jobs",
+        "email": "",
+        "location": "United States / Remote",
+        "notes": "Salary bands and leveling context alongside listings.",
+        "tags": [
+          "job board",
+          "compensation"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Microsoft Careers",
+        "url": "https://careers.microsoft.com/",
+        "email": "",
+        "location": "United States / Global",
+        "notes": "Cloud, developer tools, security, and platform roles.",
+        "tags": [
+          "company",
+          "cloud",
+          "enterprise"
+        ]
+      }
+    ]
+  },
+  {
+    "country": "United Kingdom",
+    "targets": [
+      {
+        "type": "Recruiter",
+        "name": "Hays UK — Technology",
+        "url": "https://www.hays.co.uk/job/technology-jobs",
+        "email": "",
+        "location": "United Kingdom",
+        "notes": "Permanent and contract IT leadership across England, Scotland, Wales, and NI.",
+        "tags": [
+          "recruiter",
+          "technology",
+          "UK"
+        ]
+      },
+      {
+        "type": "Recruiter",
+        "name": "Michael Page UK — Technology",
+        "url": "https://www.michaelpage.co.uk/job-detail/technology",
+        "email": "",
+        "location": "United Kingdom",
+        "notes": "Architecture, engineering management, and senior developer roles nationwide.",
+        "tags": [
+          "recruiter",
+          "technology"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "LinkedIn Jobs — United Kingdom",
+        "url": "https://www.linkedin.com/jobs/search/?location=United%20Kingdom&keywords=Software%20Architect",
+        "email": "",
+        "location": "United Kingdom",
+        "notes": "Skilled Worker visa sponsorship sometimes flagged in listings — verify with employer.",
+        "tags": [
+          "job board",
+          "visa"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Reed.co.uk — IT & technology",
+        "url": "https://www.reed.co.uk/jobs/it-jobs",
+        "email": "",
+        "location": "United Kingdom",
+        "notes": "Large UK-specific board; good for London, Manchester, Edinburgh, and remote UK.",
+        "tags": [
+          "job board",
+          "UK"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "CWJobs — technology careers",
+        "url": "https://www.cwjobs.co.uk/",
+        "email": "",
+        "location": "United Kingdom",
+        "notes": "Contract-heavy market; useful for day-rate and inside-IR35 awareness.",
+        "tags": [
+          "job board",
+          "contract"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "ARM Careers",
+        "url": "https://careers.arm.com/",
+        "email": "",
+        "location": "Cambridge / UK-wide",
+        "notes": "Semiconductor and software platforms; strong for low-level systems and architecture adjacent roles.",
+        "tags": [
+          "company",
+          "semiconductor",
+          "Cambridge"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Indeed UK — IT jobs",
+        "url": "https://uk.indeed.com/",
+        "email": "",
+        "location": "United Kingdom",
+        "notes": "Broad coverage across England, Scotland, Wales, and NI.",
+        "tags": [
+          "job board",
+          "Indeed"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Guardian Jobs — technology",
+        "url": "https://jobs.theguardian.com/",
+        "email": "",
+        "location": "United Kingdom",
+        "notes": "Quality employers and public-sector adjacent listings.",
+        "tags": [
+          "job board",
+          "UK"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Wise (formerly TransferWise) Careers",
+        "url": "https://wise.jobs/",
+        "email": "",
+        "location": "London / Tallinn / Hybrid",
+        "notes": "Global fintech; strong engineering culture and remote-friendly teams.",
+        "tags": [
+          "company",
+          "fintech",
+          "London"
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Germany",
+    "targets": [
+      {
+        "type": "Recruiter",
+        "name": "Hays Germany — IT & Engineering",
+        "url": "https://www.hays.de/jobs/it-und-technik",
+        "email": "",
+        "location": "Germany",
+        "notes": "English and German roles; Berlin, Munich, Frankfurt, and Hamburg hubs.",
+        "tags": [
+          "recruiter",
+          "technology",
+          "Germany"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "StepStone — IT jobs Germany",
+        "url": "https://www.stepstone.de/",
+        "email": "",
+        "location": "Germany",
+        "notes": "Leading German-language board; use English keywords and filters for international employers.",
+        "tags": [
+          "job board",
+          "StepStone"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "LinkedIn Jobs — Germany",
+        "url": "https://www.linkedin.com/jobs/search/?location=Germany&keywords=Software%20Architect",
+        "email": "",
+        "location": "Germany",
+        "notes": "Mix of startups and Mittelstand; Blue Card eligibility often mentioned for non-EU candidates.",
+        "tags": [
+          "job board",
+          "Blue Card"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "XING Jobs",
+        "url": "https://www.xing.com/jobs",
+        "email": "",
+        "location": "Germany / DACH",
+        "notes": "DACH-focused professional network; strong for German-speaking applicants.",
+        "tags": [
+          "job board",
+          "DACH"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "SAP Careers",
+        "url": "https://jobs.sap.com/",
+        "email": "",
+        "location": "Walldorf / Germany / Remote",
+        "notes": "Enterprise software; cloud platform, architecture, and engineering leadership roles.",
+        "tags": [
+          "company",
+          "enterprise",
+          "Germany"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Siemens Careers",
+        "url": "https://jobs.siemens.com/",
+        "email": "",
+        "location": "Germany / Global",
+        "notes": "Industrial software, automation, and digital industries — relevant for embedded and systems architects.",
+        "tags": [
+          "company",
+          "industrial",
+          "Germany"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Indeed Deutschland — IT",
+        "url": "https://de.indeed.com/",
+        "email": "",
+        "location": "Germany",
+        "notes": "Parallel to StepStone; filter English-speaking employers.",
+        "tags": [
+          "job board",
+          "Indeed"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Zalando Tech Careers",
+        "url": "https://jobs.zalando.com/",
+        "email": "",
+        "location": "Berlin / Germany",
+        "notes": "E-commerce platform at scale; backend, data, and platform roles.",
+        "tags": [
+          "company",
+          "e-commerce",
+          "Berlin"
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Ireland",
+    "targets": [
+      {
+        "type": "Recruiter",
+        "name": "Morgan McKinley Ireland — Technology",
+        "url": "https://www.morganmckinley.ie/",
+        "email": "",
+        "location": "Dublin / Ireland",
+        "notes": "Strong for Dublin tech hub and multinational HQs.",
+        "tags": [
+          "recruiter",
+          "technology",
+          "Dublin"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "LinkedIn Jobs — Ireland",
+        "url": "https://www.linkedin.com/jobs/search/?location=Ireland&keywords=Software%20Engineer",
+        "email": "",
+        "location": "Ireland",
+        "notes": "Many Dublin-based EU HQs post here first.",
+        "tags": [
+          "job board",
+          "LinkedIn"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "IrishJobs.ie — IT",
+        "url": "https://www.irishjobs.ie/",
+        "email": "",
+        "location": "Ireland",
+        "notes": "National board; filter Dublin, Cork, Galway, remote Ireland.",
+        "tags": [
+          "job board",
+          "Ireland"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Indeed Ireland",
+        "url": "https://ie.indeed.com/",
+        "email": "",
+        "location": "Ireland",
+        "notes": "Volume listings; pair with company career pages for visa notes.",
+        "tags": [
+          "job board",
+          "Indeed"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Stripe Careers (Dublin office)",
+        "url": "https://stripe.com/jobs/search?locations=Dublin",
+        "email": "",
+        "location": "Dublin",
+        "notes": "Payments infrastructure; senior backend and platform hiring.",
+        "tags": [
+          "company",
+          "fintech",
+          "Dublin"
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Australia",
+    "targets": [
+      {
+        "type": "Job Board",
+        "name": "SEEK — technology jobs",
+        "url": "https://www.seek.com.au/",
+        "email": "",
+        "location": "Australia",
+        "notes": "Dominant AU/NZ board; filter visa sponsorship where needed.",
+        "tags": [
+          "job board",
+          "Australia"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "LinkedIn Jobs — Australia",
+        "url": "https://www.linkedin.com/jobs/search/?location=Australia&keywords=Software%20Engineer",
+        "email": "",
+        "location": "Australia",
+        "notes": "Sydney and Melbourne heavy; remote AU filters available.",
+        "tags": [
+          "job board",
+          "LinkedIn"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Indeed Australia",
+        "url": "https://au.indeed.com/",
+        "email": "",
+        "location": "Australia",
+        "notes": "Broad coverage across states.",
+        "tags": [
+          "job board",
+          "Indeed"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Jora — IT Australia",
+        "url": "https://au.jora.com/",
+        "email": "",
+        "location": "Australia",
+        "notes": "Aggregator-style listings; cross-check dates.",
+        "tags": [
+          "job board",
+          "aggregator"
+        ]
+      },
+      {
+        "type": "Company",
+        "name": "Atlassian Careers",
+        "url": "https://www.atlassian.com/company/careers",
+        "email": "",
+        "location": "Sydney / Remote ANZ",
+        "notes": "Collaboration software; platform and cloud engineering.",
+        "tags": [
+          "company",
+          "SaaS",
+          "Australia"
+        ]
+      }
+    ]
+  },
+  {
+    "country": "Remote",
+    "targets": [
+      {
+        "type": "Job Board",
+        "name": "LinkedIn — Remote worldwide",
+        "url": "https://www.linkedin.com/jobs/search/?keywords=software%20engineer&f_WT=2",
+        "email": "",
+        "location": "Remote",
+        "notes": "Use LinkedIn remote filter; verify timezone overlap and contract type.",
+        "tags": [
+          "job board",
+          "remote",
+          "global"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "We Work Remotely — tech",
+        "url": "https://weworkremotely.com/",
+        "email": "",
+        "location": "Remote",
+        "notes": "Curated remote-first listings; often US/EU time zones.",
+        "tags": [
+          "job board",
+          "remote"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Remote OK — developer jobs",
+        "url": "https://remoteok.com/",
+        "email": "",
+        "location": "Remote",
+        "notes": "Developer-focused remote roles.",
+        "tags": [
+          "job board",
+          "developers"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "Wellfound (AngelList) — startup jobs",
+        "url": "https://wellfound.com/",
+        "email": "",
+        "location": "Remote / Hybrid",
+        "notes": "Startup-heavy; equity and early-stage teams.",
+        "tags": [
+          "job board",
+          "startups"
+        ]
+      },
+      {
+        "type": "Job Board",
+        "name": "FlexJobs — vetted remote",
+        "url": "https://www.flexjobs.com/",
+        "email": "",
+        "location": "Remote",
+        "notes": "Paid membership model; fewer scams than open boards.",
+        "tags": [
+          "job board",
+          "remote"
+        ]
+      }
+    ]
+  }
+]

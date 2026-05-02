@@ -5,13 +5,15 @@ import { saveResumeAction } from "../../actions";
 import { ResumeFormSharedProvider } from "@/components/resume-builder/resume-form-shared-context";
 import { EducationEditor, ProjectsEditor, SkillsEditor } from "@/components/resume-builder/dynamic-section-editors";
 import { ExperienceEditor } from "@/components/resume-builder/experience-editor";
-import { EXPORT_CREDIT_COST, getUserAccount } from "@/lib/resume-builder/admin";
+import { AI_ASSIST_CREDIT_COST, EXPORT_CREDIT_COST, getUserAccount } from "@/lib/resume-builder/admin";
 import { getCurrentUser } from "@/lib/resume-builder/auth";
 import { getLocale } from "@/lib/i18n/get-locale";
 import { getMessages } from "@/lib/i18n/messages";
 import { t } from "@/lib/i18n/t";
 import { getOptionSets } from "@/lib/resume-builder/options";
+import { buildResumeAiPack } from "@/lib/resume-builder/resume-ai";
 import { getResume } from "@/lib/resume-builder/resumes";
+import { ResumeTextAreaWithAi } from "@/components/resume-builder/resume-textarea-with-ai";
 
 type EditorPageProps = {
   params: Promise<{ id: string }>;
@@ -44,6 +46,7 @@ export default async function EditorPage({ params, searchParams }: EditorPagePro
 
   const f = ej.fields;
   const sec = ej.sections;
+  const resumeAi = buildResumeAiPack(m, AI_ASSIST_CREDIT_COST);
 
   return (
     <main className="soft-grid min-h-screen p-4 md:p-8">
@@ -102,7 +105,15 @@ export default async function EditorPage({ params, searchParams }: EditorPagePro
 
             <EditorSection icon={<Sparkles />} title={sec.target.title} description={sec.target.desc}>
               <Field label={f.relocationLine} name="target.relocationLine" defaultValue={profile.target.relocationLine} required selectPlaceholder={sh.selectPlaceholder} />
-              <TextArea label={f.permitParagraph} name="target.permitLine" defaultValue={profile.target.permitLine} rows={4} required />
+              <ResumeTextAreaWithAi
+                section="target"
+                resumeAi={resumeAi}
+                label={f.permitParagraph}
+                name="target.permitLine"
+                defaultValue={profile.target.permitLine}
+                rows={4}
+                required
+              />
               <div className="grid gap-4 md:grid-cols-2">
                 <Field label={f.availability} name="target.availability" defaultValue={profile.target.availability} options={options.availability} selectPlaceholder={sh.selectPlaceholder} />
                 <Field
@@ -123,7 +134,14 @@ export default async function EditorPage({ params, searchParams }: EditorPagePro
             </EditorSection>
 
             <EditorSection icon={<FileText />} title={sec.summary.title} description={sec.summary.desc}>
-              <TextArea label={f.summaryParagraphs} name="summary" defaultValue={profile.summary.join("\n")} rows={6} />
+              <ResumeTextAreaWithAi
+                section="summary"
+                resumeAi={resumeAi}
+                label={f.summaryParagraphs}
+                name="summary"
+                defaultValue={profile.summary.join("\n")}
+                rows={6}
+              />
             </EditorSection>
 
             <EditorSection icon={<Layers />} title={sec.skills.title} description={sec.skills.desc}>
@@ -131,7 +149,7 @@ export default async function EditorPage({ params, searchParams }: EditorPagePro
             </EditorSection>
 
             <EditorSection icon={<BriefcaseBusiness />} title={sec.experience.title} description={sec.experience.desc}>
-              <ExperienceEditor initialItems={profile.experience} options={options} />
+              <ExperienceEditor initialItems={profile.experience} options={options} resumeAi={resumeAi} />
             </EditorSection>
 
             <EditorSection icon={<Sparkles />} title={sec.projects.title} description={sec.projects.desc}>

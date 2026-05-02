@@ -42,6 +42,11 @@
   "langSwitcher": {
     "label": "زبان"
   },
+  "theme": {
+    "toggleAria": "تغییر تم بک‌لایت بین روز و شب",
+    "switchToDay": "تم روشن (روز)",
+    "switchToNight": "تم شب"
+  },
   "profile": {
     "backDashboard": "داشبورد",
     "eyebrow": "پروفایل شما",
@@ -57,7 +62,7 @@
     "signOut": "خروج از حساب",
     "aiEyebrow": "هوش مصنوعی (اختیاری)",
     "aiProvider": "ارائه‌دهندهٔ AI",
-    "aiProviderHelp": "اگر سرور LLM_API_BASE نگذارد، این گزینه میزبان API را مشخص می‌کند. برای کلید Google AI Studio گزینهٔ Gemini را بزنید.",
+    "aiProviderHelp": "کلید Google AI Studio با «AIza» شروع می‌شود؛ این اپ همیشه آن را به میزبان Gemini می‌فرستد (حتی اگر OpenAI انتخاب شده باشد). ترجیحاً Auto یا Gemini بگذارید. اگر باز خطا بود: در Google Cloud «Generative Language API» را فعال کنید و برای سرور، محدودیت referrer/IP روی کلید بردارید—یا برای تست کلید بدون محدودیت بسازید.",
     "aiProviderAuto": "تشخیص خودکار",
     "aiProviderGemini": "Google Gemini (AI Studio)",
     "aiProviderOpenAI": "OpenAI یا API سازگار (میزبان پیش‌فرض: api.openai.com)",
@@ -246,11 +251,18 @@
     "close": "بستن",
     "loading": "در حال فکر کردن…",
     "resultTitle": "پاسخ",
+    "copyAnswer": "کپی پاسخ",
+    "copied": "کپی شد",
+    "readAloud": "خواندن با صدا",
+    "stopSpeech": "توقف",
+    "readingComfort": "خواندن راحت‌تر",
+    "readingComfortActive": "حالت خوانا روشن است",
     "errorCredits": "اعتبار کافی نیست.",
     "errorGeneric": "ارتباط با AI برقرار نشد. دوباره تلاش کنید.",
     "errorNoAi": "AI پیکربندی نشده. در پروفایل کلید API بگذارید یا کلید سرور را تنظیم کنید.",
     "errorAuth": "برای کمک AI وارد حساب شوید.",
-    "errorInvalidKey": "کلید API رد شد. پروفایل یا متغیرهای محیط LLM_API_KEY / OPENAI_API_KEY را بررسی کنید.",
+    "errorInvalidKey": "کلید API رد شد. دوباره در پروفایل بگذارید (بدون فاصله اضافه). یا روی سرور: LLM_API_KEY، OPENAI_API_KEY یا GEMINI_API_KEY. برای Google AI Studio: API «Generative Language» را فعال کنید و روی کلید، محدودیت referrer نگذارید (این برنامه از سرور وصل می‌شود).",
+    "errorApiKeyLeaked": "گوگل این کلید API را به‌خاطر فاش شدن در اینترنت مسدود کرده است. همان کلید دیگر کار نمی‌کند. در Google AI Studio یا Cloud Console آن را حذف/باطل کنید، یک کلید کاملاً جدید بسازید و فقط در پروفایل یا متغیرهای محرمانهٔ سرور بگذارید — نه در چت عمومی، نه در گیت و نه در اسکرین‌شات.",
     "errorRateLimit": "ارائه‌دهندهٔ مدل محدودیت نرخ گذاشته است؛ کمی بعد دوباره امتحان کنید.",
     "errorTimeout": "پاسخ مدل خیلی طول کشید. دوباره تلاش کنید.",
     "errorNetwork": "سرور به آدرس API مدل نرسید. اینترنت، فایروال یا LLM_API_BASE را بررسی کنید.",
@@ -266,6 +278,17 @@
       "speakingHints": "راهنمای اسپیکینگ",
       "quizExplain": "توضیح پاسخ کویز",
       "vocabDeep": "عمیق‌تر (واژه)"
+    }
+  },
+  "resumeAi": {
+    "fabTitle": "هوش مصنوعی رزومه",
+    "fabAria": "پیشنهاد هوش مصنوعی برای این فیلد",
+    "emptyField": "اول در این فیلد چیزی بنویسید، بعد از AI بپرسید.",
+    "tasks": {
+      "polish": "صیقل متن",
+      "shorten": "کوتاه‌تر",
+      "impactBullets": "نکات قوی‌تر",
+      "clarify": "شفاف‌تر و ساده‌تر"
     }
   },
   "learning": {
@@ -327,7 +350,14 @@
     "tabWork": "کار و ریکروتر",
     "tabUniversities": "دانشگاه‌ها",
     "website": "وب‌سایت",
-    "email": "ایمیل"
+    "email": "ایمیل",
+    "schoolCategory": "نوع مدرسه",
+    "schoolTypesFallback": "مدرسه",
+    "schoolTypes": {
+      "University": "دانشگاه",
+      "Business school": "مدرسه بازرگانی",
+      "Technical university": "دانشگاه فنی و مهندسی"
+    }
   },
   "workspaceJob": {
     "headerTitle": "رزومهٔ شغلی و مهاجرت کاری",
@@ -746,7 +776,7 @@
     "badge": "گزینه‌های مدیر",
     "eyebrow": "داده کشویی قابل استفاده مجدد",
     "title": "مدیریت گزینه‌های فیلدهای رزومه.",
-    "intro": "مقادیر تکراری را یک‌بار اینجا تعریف کنید. فرم‌ها از این لیست‌ها برای کشویی استفاده می‌کنند.",
+    "intro": "مقادیر تکراری را یک‌بار اینجا تعریف کنید. فرم‌ها از این لیست‌ها برای کشویی استفاده می‌کنند. ذخیرهٔ رسمی: فایل content/defaults/resume-option-sets.json — با ذخیره اینجا همان فایل روی دیسک به‌روز می‌شود.",
     "saved": "گزینه‌ها با موفقیت ذخیره شد.",
     "error": "ذخیره این مجموعه گزینه انجام نشد.",
     "save": "ذخیره",
@@ -773,10 +803,10 @@
     "lineFormatSame": "فرمت خط (مثل کار):",
     "headerWorkEyebrow": "مقاصد رزومه (مدیر)",
     "headerWorkTitle": "کاربران رزومه را کجا بفرستند.",
-    "headerWorkBody": "ریکروتر، بورد جاب و شرکت را به‌ازای هر کشور اضافه کنید. کاربر لیست را با کشور فیلتر می‌بیند.",
+    "headerWorkBody": "ریکروتر، بورد جاب و شرکت را به‌ازای هر کشور اضافه کنید. کاربر لیست را با کشور فیلتر می‌بیند. ذخیرهٔ رسمی: content/defaults/work-targets.json — ذخیره اینجا همان فایل را به‌روز می‌کند.",
     "headerUniEyebrow": "مقاصد دانشگاهی (مدیر)",
     "headerUniTitle": "لینک‌های پذیرش به‌ازای کشور و رشته.",
-    "headerUniBody": "دانشگاه و بیزنس اسکول را به‌ازای هر کشور و رشته اضافه کنید؛ همان لیست در صفحه مقاصد دیده می‌شود.",
+    "headerUniBody": "دانشگاه و بیزنس اسکول را به‌ازای هر کشور و رشته اضافه کنید؛ همان لیست در صفحه مقاصد دیده می‌شود. ذخیرهٔ رسمی: content/defaults/university-targets.json — ذخیره اینجا همان فایل را به‌روز می‌کند. ساختار فایل: آرایه از { \"country\", \"universities\": [{ \"type\", \"name\", \"ranking_world\" (اختیاری), \"fields\", \"notes\", \"url\" }] }؛ رشته‌ها در \"fields\" همان گزینه‌های فیلتر صفحهٔ کاربرند.",
     "saved": "ذخیره شد.",
     "errorWork": "ذخیره نشد. کشور و فرمت خط را بررسی کنید.",
     "errorUni": "ذخیره نشد. کشور، رشته و فرمت خط را بررسی کنید."

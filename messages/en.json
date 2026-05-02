@@ -42,6 +42,11 @@
   "langSwitcher": {
     "label": "Language"
   },
+  "theme": {
+    "toggleAria": "Switch backlight theme between day and night",
+    "switchToDay": "Switch to day backlight",
+    "switchToNight": "Switch to night backlight"
+  },
   "profile": {
     "backDashboard": "Dashboard",
     "eyebrow": "Your profile",
@@ -57,7 +62,7 @@
     "signOut": "Sign out",
     "aiEyebrow": "AI (optional)",
     "aiProvider": "AI provider",
-    "aiProviderHelp": "If the server does not set LLM_API_BASE, this chooses the API host. Pick Gemini for Google AI Studio keys.",
+    "aiProviderHelp": "Google AI Studio keys start with “AIza…”. They always use the Gemini host from this app (even if “OpenAI” was chosen). Prefer Auto or Gemini. If it still fails: in Google Cloud enable “Generative Language API”, and remove HTTP referrer / IP restrictions on the key for server use—or create an unrestricted key for testing.",
     "aiProviderAuto": "Auto-detect",
     "aiProviderGemini": "Google Gemini (AI Studio)",
     "aiProviderOpenAI": "OpenAI or compatible API (default host: api.openai.com)",
@@ -246,11 +251,18 @@
     "close": "Close",
     "loading": "Thinking…",
     "resultTitle": "Answer",
+    "copyAnswer": "Copy answer",
+    "copied": "Copied",
+    "readAloud": "Read aloud",
+    "stopSpeech": "Stop",
+    "readingComfort": "Easier reading",
+    "readingComfortActive": "Comfort reading on",
     "errorCredits": "Not enough credits.",
     "errorGeneric": "Could not reach AI. Try again.",
     "errorNoAi": "AI is not configured. Add an API key in Profile or set server keys.",
     "errorAuth": "Sign in to use AI assist.",
-    "errorInvalidKey": "API key was rejected. Check Profile or server env LLM_API_KEY / OPENAI_API_KEY.",
+    "errorInvalidKey": "API key was rejected. Re-enter the key in Profile (no extra spaces), or set a server key: LLM_API_KEY, OPENAI_API_KEY, or GEMINI_API_KEY. For Google AI Studio keys: enable Generative Language API in Google Cloud, and do not use HTTP-referrer key restrictions for this server app.",
+    "errorApiKeyLeaked": "Google blocked this API key because it was detected as exposed (“leaked”) online. Revoke it in Google AI Studio / Cloud Console, create a brand-new key, and save only in Profile or private server env — never in chat, screenshots, or git.",
     "errorRateLimit": "The model provider rate-limited this key. Wait a bit and retry.",
     "errorTimeout": "The model took too long to respond. Try again.",
     "errorNetwork": "This server could not reach the model API. Check internet, firewall, or LLM_API_BASE.",
@@ -266,6 +278,17 @@
       "speakingHints": "Speaking hints",
       "quizExplain": "Explain answer",
       "vocabDeep": "Deep dive (word)"
+    }
+  },
+  "resumeAi": {
+    "fabTitle": "Resume AI",
+    "fabAria": "Get AI suggestions for this field",
+    "emptyField": "Write something in this field first, then ask AI.",
+    "tasks": {
+      "polish": "Polish wording",
+      "shorten": "Make it shorter",
+      "impactBullets": "Stronger bullets",
+      "clarify": "Clearer & simpler"
     }
   },
   "learning": {
@@ -327,7 +350,14 @@
     "tabWork": "Work & recruiters",
     "tabUniversities": "Universities",
     "website": "Website",
-    "email": "Email"
+    "email": "Email",
+    "schoolCategory": "School type",
+    "schoolTypesFallback": "School",
+    "schoolTypes": {
+      "University": "University",
+      "Business school": "Business school",
+      "Technical university": "Technical university"
+    }
   },
   "workspaceJob": {
     "headerTitle": "Job & migration resumes",
@@ -741,7 +771,7 @@
     "badge": "Admin options",
     "eyebrow": "Reusable dropdown data",
     "title": "Manage resume field options.",
-    "intro": "Define repeated values once here. Resume forms use these lists for dropdowns and guided inputs.",
+    "intro": "Define repeated values once here. Resume forms use these lists for dropdowns and guided inputs. Canonical storage: content/defaults/resume-option-sets.json — saving here updates that file on disk.",
     "saved": "Options saved successfully.",
     "error": "Could not save this option set.",
     "save": "Save",
@@ -768,10 +798,10 @@
     "lineFormatSame": "Line format (same as work):",
     "headerWorkEyebrow": "Admin resume targets",
     "headerWorkTitle": "Manage where users can send resumes.",
-    "headerWorkBody": "Add recruiter, job board, and company targets per country. Users see this list filtered by selected country.",
+    "headerWorkBody": "Add recruiter, job board, and company targets per country. Users see this list filtered by selected country. Canonical storage: content/defaults/work-targets.json — saving updates that file.",
     "headerUniEyebrow": "Admin university targets",
     "headerUniTitle": "Manage admissions links by country and field.",
-    "headerUniBody": "Add universities, graduate schools, and business schools per country and field of study. Users browse the same list on the targets page.",
+    "headerUniBody": "Add universities, graduate schools, and business schools per country and field of study. Users browse the same list on the targets page. Canonical storage: content/defaults/university-targets.json — saving updates that file. Catalog shape: array of { \"country\", \"universities\": [{ \"type\", \"name\", \"ranking_world\"?, \"fields\": [], \"notes\", \"url\"? }] }; optional ranking_world is shown as tags and in notes.",
     "saved": "Saved.",
     "errorWork": "Could not save. Check country and line format.",
     "errorUni": "Could not save. Check country, field, and line format."

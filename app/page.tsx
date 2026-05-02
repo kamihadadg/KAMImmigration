@@ -342,7 +342,7 @@ function PillarCard({
 
 function JourneyStep({ n, title, text }: { n: string; title: string; text: string }) {
   return (
-    <li className="relative list-none rounded-3xl border border-white/10 bg-slate-950/50 p-5">
+    <li className="backlit-dark-surface relative list-none rounded-3xl border border-white/10 bg-slate-950/50 p-5">
       <span className="font-mono text-lg font-black text-cyan-200">{n}</span>
       <h3 className="mt-2 text-lg font-black">{title}</h3>
       <p className="mt-2 text-sm leading-6 text-slate-400">{text}</p>
@@ -352,7 +352,7 @@ function JourneyStep({ n, title, text }: { n: string; title: string; text: strin
 
 function MarketTile({ country, tag, detail }: { country: string; tag: string; detail: string }) {
   return (
-    <article className="rounded-3xl border border-white/10 bg-slate-950/45 p-5">
+    <article className="backlit-dark-surface rounded-3xl border border-white/10 bg-slate-950/45 p-5">
       <div className="flex items-center justify-between gap-2">
         <p className="text-lg font-black">{country}</p>
         <BookOpen className="text-slate-600" size={18} />

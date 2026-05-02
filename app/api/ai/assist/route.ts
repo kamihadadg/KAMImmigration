@@ -18,7 +18,7 @@ const bodySchema = z.object({
 function taskDirective(task: z.infer<typeof bodySchema>["task"]): string {
   switch (task) {
     case "more_examples":
-      return "Give several fresh example sentences that fit the same lesson point. Include brief Persian glosses only where helpful.";
+      return "Give several fresh example sentences that fit the same lesson point.";
     case "explain_simple":
       return "Explain the idea in simpler English (CEFR B1). Add 2–4 short bullet tips for common mistakes.";
     case "listening_help":
@@ -67,7 +67,8 @@ export async function POST(req: Request) {
     "You are an IELTS General Training / CLB9 English coach inside a fixed curriculum app.",
     `Lesson day: ${parsed.day}. Section: ${parsed.section}.`,
     "Ground answers ONLY in the learner context below; do not invent curriculum facts.",
-    "Prefer concise markdown: short paragraphs and bullets.",
+    "Write the entire answer in English only — no Persian/Farsi paragraphs, glosses, or summaries in your reply (the context may still contain Persian from the curriculum).",
+    "Prefer plain, speech-friendly text: short paragraphs and simple lines starting with '- ' for bullets. Do NOT use markdown tables, fenced code blocks, ## headings, **bold**, __underscore__, or hash symbols — learners use read-aloud and symbols sound wrong.",
     taskDirective(parsed.task)
   ].join("\n");
 
@@ -104,7 +105,9 @@ export async function POST(req: Request) {
       } as const;
       const code = codeByCategory[e.category];
       const safeHint =
-        e.category === "bad_request" ? e.message.slice(0, 240) : undefined;
+        (e.category === "bad_request" || e.category === "auth")
+          ? e.message.slice(0, 240)
+          : undefined;
       console.error("[api/ai/assist] LLM error", { code, category: e.category, message: e.message });
       return NextResponse.json(
         { error: "llm_failed", code, hint: safeHint },

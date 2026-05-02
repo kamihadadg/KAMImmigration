@@ -24,13 +24,15 @@ import {
   TeachingEditor
 } from "@/components/resume-builder/academic-section-editors";
 import { EducationEditor, ProjectsEditor, SkillsEditor } from "@/components/resume-builder/dynamic-section-editors";
-import { EXPORT_CREDIT_COST, getUserAccount } from "@/lib/resume-builder/admin";
+import { AI_ASSIST_CREDIT_COST, EXPORT_CREDIT_COST, getUserAccount } from "@/lib/resume-builder/admin";
 import { getCurrentUser } from "@/lib/resume-builder/auth";
 import { getLocale } from "@/lib/i18n/get-locale";
 import { getMessages } from "@/lib/i18n/messages";
 import { t } from "@/lib/i18n/t";
 import { getOptionSets } from "@/lib/resume-builder/options";
+import { buildResumeAiPack } from "@/lib/resume-builder/resume-ai";
 import { getResume } from "@/lib/resume-builder/resumes";
+import { ResumeTextAreaWithAi } from "@/components/resume-builder/resume-textarea-with-ai";
 
 type AcademicEditorPageProps = {
   params: Promise<{ id: string }>;
@@ -64,6 +66,7 @@ export default async function AcademicEditorPage({ params, searchParams }: Acade
 
   const f = ea.fields;
   const sec = ea.sections;
+  const resumeAi = buildResumeAiPack(m, AI_ASSIST_CREDIT_COST);
 
   return (
     <main className="soft-grid min-h-screen p-4 md:p-8">
@@ -127,7 +130,14 @@ export default async function AcademicEditorPage({ params, searchParams }: Acade
               </EditorSection>
 
               <EditorSection icon={<Sparkles />} title={sec.researchInterests.title} description={sec.researchInterests.desc}>
-                <TextArea label={f.interestsLines} name="researchInterests" defaultValue={profile.researchInterests.join("\n")} rows={6} />
+                <ResumeTextAreaWithAi
+                  section="academic_research"
+                  resumeAi={resumeAi}
+                  label={f.interestsLines}
+                  name="researchInterests"
+                  defaultValue={profile.researchInterests.join("\n")}
+                  rows={6}
+                />
               </EditorSection>
 
               <EditorSection icon={<GraduationCap />} title={sec.education.title} description={sec.education.desc}>
@@ -135,11 +145,11 @@ export default async function AcademicEditorPage({ params, searchParams }: Acade
               </EditorSection>
 
               <EditorSection icon={<BookOpen />} title={sec.teaching.title} description={sec.teaching.desc}>
-                <TeachingEditor initialItems={profile.teaching} />
+                <TeachingEditor initialItems={profile.teaching} resumeAi={resumeAi} />
               </EditorSection>
 
               <EditorSection icon={<Microscope />} title={sec.researchExp.title} description={sec.researchExp.desc}>
-                <ResearchExperienceEditor initialItems={profile.researchExperience} />
+                <ResearchExperienceEditor initialItems={profile.researchExperience} resumeAi={resumeAi} />
               </EditorSection>
 
               <EditorSection icon={<FileText />} title={sec.publications.title} description={sec.publications.desc}>
@@ -160,10 +170,10 @@ export default async function AcademicEditorPage({ params, searchParams }: Acade
 
               <EditorSection icon={<GraduationCap />} title={sec.honors.title} description={sec.honors.desc}>
                 <div className="grid gap-4 md:grid-cols-2">
-                  <TextArea label={f.honorsScholarships} name="honors" defaultValue={profile.honors.join("\n")} rows={5} />
-                  <TextArea label={f.grantsFunding} name="grants" defaultValue={profile.grants.join("\n")} rows={5} />
-                  <TextArea label={f.serviceLines} name="service" defaultValue={profile.service.join("\n")} rows={5} />
-                  <TextArea label={f.languagesLines} name="languages" defaultValue={profile.languages.join("\n")} rows={5} placeholder={options.languages.join("\n")} />
+                  <ResumeTextAreaWithAi section="academic_lines" resumeAi={resumeAi} label={f.honorsScholarships} name="honors" defaultValue={profile.honors.join("\n")} rows={5} />
+                  <ResumeTextAreaWithAi section="academic_lines" resumeAi={resumeAi} label={f.grantsFunding} name="grants" defaultValue={profile.grants.join("\n")} rows={5} />
+                  <ResumeTextAreaWithAi section="academic_lines" resumeAi={resumeAi} label={f.serviceLines} name="service" defaultValue={profile.service.join("\n")} rows={5} />
+                  <ResumeTextAreaWithAi section="academic_lines" resumeAi={resumeAi} label={f.languagesLines} name="languages" defaultValue={profile.languages.join("\n")} rows={5} placeholder={options.languages.join("\n")} />
                 </div>
               </EditorSection>
 

@@ -13,8 +13,11 @@ import {
   listResumeTargetLists,
   listUniversityFieldsForCountry,
   listUniversityTargetLists,
-  targetsToText
+  targetsToText,
+  ORDERED_UNIVERSITY_COUNTRIES,
+  isAllowedUniversityCountry
 } from "@/lib/resume-builder/targets";
+import { canonicalUniversityCountry } from "@/lib/resume-builder/university-catalog";
 
 type Kind = "work" | "universities";
 
@@ -116,8 +119,18 @@ export default async function AdminTargetsPage({ searchParams }: AdminTargetsPag
     );
   }
 
-  const selectedCountry = country?.trim() || uniLists[0]?.country || options.countries[0] || "Netherlands";
-  const uniCountries = Array.from(new Set([...options.countries, ...uniLists.map((l) => l.country), selectedCountry].filter(Boolean)));
+  const defaultUni = ORDERED_UNIVERSITY_COUNTRIES[0];
+  const countryNorm = country?.trim() ? canonicalUniversityCountry(country.trim()) : "";
+  const selectedCountry =
+    countryNorm && isAllowedUniversityCountry(countryNorm) ? countryNorm : defaultUni;
+  const uniCountries = [...ORDERED_UNIVERSITY_COUNTRIES];
+  const orderMap = new Map<string, number>(ORDERED_UNIVERSITY_COUNTRIES.map((c, i) => [c, i]));
+  const sortedUniLists = [...uniLists].sort((a, b) => {
+    const ca = orderMap.get(a.country) ?? 999;
+    const cb = orderMap.get(b.country) ?? 999;
+    if (ca !== cb) return ca - cb;
+    return a.field.localeCompare(b.field, undefined, { sensitivity: "base" });
+  });
   const fields = listUniversityFieldsForCountry(selectedCountry);
   const fieldParam = field?.trim() || "";
   const selectedField = fieldParam || fields[0] || "Computer Science & Engineering";
@@ -135,7 +148,7 @@ export default async function AdminTargetsPage({ searchParams }: AdminTargetsPag
             <h2 className="text-xl font-black">{at.uniAsideTitle}</h2>
             <p className="mt-2 text-xs text-slate-400">{at.uniAsideHint}</p>
             <div className="mt-4 grid max-h-[70vh] gap-2 overflow-y-auto pr-1">
-              {uniLists.map((item) => (
+              {sortedUniLists.map((item) => (
                 <Link
                   key={`${item.country}|${item.field}`}
                   href={`/admin/targets?kind=universities&country=${encodeURIComponent(item.country)}&field=${encodeURIComponent(item.field)}`}

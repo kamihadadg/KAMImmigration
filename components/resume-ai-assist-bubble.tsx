@@ -5,22 +5,11 @@ import { createPortal } from "react-dom";
 import { BookOpen, Check, Copy, Loader2, Sparkles, Square, Volume2, X } from "lucide-react";
 import { sanitizeMarkdownForSpeech } from "@/lib/markdown-for-speech";
 import type { Messages } from "@/lib/i18n/messages";
+import type { ResumeAssistSection, ResumeAssistTask } from "@/lib/resume-builder/resume-ai";
+
+export type ResumeAiAssistLabels = Messages["aiAssist"];
 
 const persianInText = /[\u0600-\u06FF]/;
-
-export type AssistSection = "vocabulary" | "grammar" | "listening" | "reading" | "writing" | "speaking" | "quiz";
-
-export type AssistTaskKey =
-  | "more_examples"
-  | "explain_simple"
-  | "listening_help"
-  | "reading_help"
-  | "writing_ideas"
-  | "speaking_hints"
-  | "quiz_explain"
-  | "vocab_deep";
-
-export type AiAssistLabels = Messages["aiAssist"];
 
 function interpolate(template: string, vars: Record<string, string | number>) {
   let out = template;
@@ -30,25 +19,25 @@ function interpolate(template: string, vars: Record<string, string | number>) {
   return out;
 }
 
-export function AiAssistBubble({
-  day,
+export function ResumeAiAssistBubble({
   section,
-  contextText,
+  getContext,
   labels,
+  emptyField,
   creditCost,
   tasks,
   children
 }: {
-  day: number;
-  section: AssistSection;
-  contextText: string;
-  labels: AiAssistLabels;
+  section: ResumeAssistSection;
+  getContext: () => string;
+  labels: ResumeAiAssistLabels;
+  emptyField: string;
   creditCost: number;
-  tasks: Array<{ key: AssistTaskKey; label: string }>;
+  tasks: Array<{ key: ResumeAssistTask; label: string }>;
   children: ReactNode;
 }) {
   const [open, setOpen] = useState(false);
-  const [task, setTask] = useState<AssistTaskKey>(tasks[0]?.key ?? "more_examples");
+  const [task, setTask] = useState<ResumeAssistTask>(tasks[0]?.key ?? "polish");
   const [loading, setLoading] = useState(false);
   const [reply, setReply] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -56,6 +45,8 @@ export function AiAssistBubble({
   const [copied, setCopied] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const copyResetRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const getContextRef = useRef(getContext);
+  getContextRef.current = getContext;
 
   const close = useCallback(() => setOpen(false), []);
 
@@ -106,17 +97,21 @@ export function AiAssistBubble({
   );
 
   const run = useCallback(async () => {
-    if (!contextText.trim()) return;
+    const contextText = getContextRef.current().trim();
+    if (!contextText) {
+      setError(emptyField);
+      setReply(null);
+      return;
+    }
     setLoading(true);
     setError(null);
     setReply(null);
     try {
-      const res = await fetch("/api/ai/assist", {
+      const res = await fetch("/api/ai/resume", {
         method: "POST",
         credentials: "include",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
-          day,
           section,
           task,
           context: contextText
@@ -177,7 +172,7 @@ export function AiAssistBubble({
     } finally {
       setLoading(false);
     }
-  }, [contextText, day, labels, section, task]);
+  }, [emptyField, labels, section, task]);
 
   useEffect(() => {
     if (!open) return;
@@ -212,7 +207,7 @@ export function AiAssistBubble({
           <div
             role="dialog"
             aria-modal="true"
-            aria-labelledby="ai-assist-title"
+            aria-labelledby="resume-ai-assist-title"
             data-backlit-surface="dark"
             className={`relative w-full rounded-[1.75rem] border border-cyan-400/25 bg-slate-900 ai-backlit-pulse-modal shadow-[0_0_0_1px_rgba(34,211,238,0.12),0_0_48px_-8px_rgba(34,211,238,0.35),0_25px_70px_rgba(0,0,0,0.65)] ring-1 ring-cyan-400/20 ${
               reply && readingComfort ? "max-w-[min(96vw,42rem)]" : "max-w-[440px]"
@@ -226,7 +221,7 @@ export function AiAssistBubble({
             >
               <div className="flex shrink-0 items-center justify-between border-b border-white/10 px-4 py-3">
                 <div className="min-w-0 pr-2">
-                  <p id="ai-assist-title" className="text-sm font-black text-white">
+                  <p id="resume-ai-assist-title" className="text-sm font-black text-white">
                     {labels.modalTitle}
                   </p>
                   <p className="text-[11px] text-slate-400">{interpolate(labels.costHint, { cost: creditCost })}</p>
@@ -261,14 +256,14 @@ export function AiAssistBubble({
                 <button
                   type="button"
                   disabled={loading}
-                  onClick={() => run()}
+                  onClick={() => void run()}
                   className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-cyan-300 py-3 font-black text-slate-950 disabled:opacity-60"
                 >
                   {loading ? <Loader2 className="animate-spin" size={18} /> : null}
                   {labels.ask}
                 </button>
 
-                {error && <p className="mt-3 rounded-xl bg-rose-500/15 p-3 text-sm text-rose-100">{error}</p>}
+                {error && <p className="mt-3 rounded-xl bg-rose-500/15 p-3 text-sm text-rose-100 whitespace-pre-wrap">{error}</p>}
 
                 {reply && (
                   <div className="mt-4 rounded-2xl border border-cyan-400/20 bg-slate-950 p-4 shadow-[inset_0_0_28px_rgba(34,211,238,0.07)] ring-1 ring-cyan-400/10">

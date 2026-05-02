@@ -1,10 +1,46 @@
 "use client";
 
 import { Plus, Trash2 } from "lucide-react";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { ResumeAiAssistBubble } from "@/components/resume-ai-assist-bubble";
 import { interpolate } from "@/lib/i18n/t";
+import type { ResumeAiAssistPack } from "@/lib/resume-builder/resume-ai";
 import { useAcademicEditorCopy } from "@/components/resume-builder/academic-editor-copy-context";
 import { useResumeFormShared } from "@/components/resume-builder/resume-form-shared-context";
+
+function readField(root: Element, name: string): string {
+  const el = root.querySelector(`[name="${CSS.escape(name)}"]`);
+  if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement || el instanceof HTMLSelectElement) return el.value;
+  return "";
+}
+
+function buildTeachingContext(root: Element | null, index: number): string {
+  if (!root) return "";
+  const p = (suffix: string) => `teaching.${index}.${suffix}`;
+  return [
+    `Institution: ${readField(root, p("institution"))}`,
+    `Course: ${readField(root, p("course"))}`,
+    `Role: ${readField(root, p("role"))}`,
+    `Period: ${readField(root, p("period"))}`,
+    "",
+    "Teaching bullets (draft):",
+    readField(root, p("bullets"))
+  ].join("\n");
+}
+
+function buildResearchContext(root: Element | null, index: number): string {
+  if (!root) return "";
+  const p = (suffix: string) => `researchExperience.${index}.${suffix}`;
+  return [
+    `Lab / group: ${readField(root, p("labOrGroup"))}`,
+    `Institution: ${readField(root, p("institution"))}`,
+    `Title / role: ${readField(root, p("title"))}`,
+    `Period: ${readField(root, p("period"))}`,
+    "",
+    "Research bullets (draft):",
+    readField(root, p("bullets"))
+  ].join("\n");
+}
 
 type TeachingItem = {
   institution: string;
@@ -16,7 +52,31 @@ type TeachingItem = {
 
 const emptyTeaching: TeachingItem = { institution: "", course: "", role: "", period: "", bullets: [] };
 
-export function TeachingEditor({ initialItems }: { initialItems: TeachingItem[] }) {
+function TeachingBulletsWithAi({ index, item, resumeAi }: { index: number; item: TeachingItem; resumeAi: ResumeAiAssistPack }) {
+  const ac = useAcademicEditorCopy();
+  const te = ac.teachingEditor;
+  const getContext = useCallback(() => {
+    const root = typeof document !== "undefined" ? document.querySelector(`[data-teaching-index="${index}"]`) : null;
+    return buildTeachingContext(root, index);
+  }, [index]);
+
+  return (
+    <div className="mt-4">
+      <ResumeAiAssistBubble
+        section="academic_lines"
+        getContext={getContext}
+        labels={resumeAi.labels}
+        emptyField={resumeAi.emptyField}
+        creditCost={resumeAi.creditCost}
+        tasks={resumeAi.tasks}
+      >
+        <TextArea label={te.bullets} name={`teaching.${index}.bullets`} defaultValue={(item.bullets ?? []).join("\n")} rows={5} />
+      </ResumeAiAssistBubble>
+    </div>
+  );
+}
+
+export function TeachingEditor({ initialItems, resumeAi }: { initialItems: TeachingItem[]; resumeAi: ResumeAiAssistPack }) {
   const sh = useResumeFormShared();
   const ac = useAcademicEditorCopy();
   const te = ac.teachingEditor;
@@ -26,7 +86,7 @@ export function TeachingEditor({ initialItems }: { initialItems: TeachingItem[] 
     <div className="grid gap-5">
       <input type="hidden" name="teachingCount" value={items.length} />
       {items.map((item, index) => (
-        <div key={index} className="rounded-3xl border border-white/10 bg-white/5 p-4">
+        <div key={index} data-teaching-index={index} className="rounded-3xl border border-white/10 bg-white/5 p-4">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <p className="font-bold text-cyan-100">{interpolate(te.cardTitle, { n: index + 1 })}</p>
             <button
@@ -43,9 +103,7 @@ export function TeachingEditor({ initialItems }: { initialItems: TeachingItem[] 
             <Field label={te.role} name={`teaching.${index}.role`} defaultValue={item.role} />
             <Field label={te.period} name={`teaching.${index}.period`} defaultValue={item.period} />
           </div>
-          <div className="mt-4">
-            <TextArea label={te.bullets} name={`teaching.${index}.bullets`} defaultValue={(item.bullets ?? []).join("\n")} rows={5} />
-          </div>
+          <TeachingBulletsWithAi index={index} item={item} resumeAi={resumeAi} />
         </div>
       ))}
       <button
@@ -69,7 +127,31 @@ type ResearchItem = {
 
 const emptyResearch: ResearchItem = { labOrGroup: "", institution: "", title: "", period: "", bullets: [] };
 
-export function ResearchExperienceEditor({ initialItems }: { initialItems: ResearchItem[] }) {
+function ResearchBulletsWithAi({ index, item, resumeAi }: { index: number; item: ResearchItem; resumeAi: ResumeAiAssistPack }) {
+  const ac = useAcademicEditorCopy();
+  const re = ac.researchEditor;
+  const getContext = useCallback(() => {
+    const root = typeof document !== "undefined" ? document.querySelector(`[data-research-index="${index}"]`) : null;
+    return buildResearchContext(root, index);
+  }, [index]);
+
+  return (
+    <div className="mt-4">
+      <ResumeAiAssistBubble
+        section="academic_experience"
+        getContext={getContext}
+        labels={resumeAi.labels}
+        emptyField={resumeAi.emptyField}
+        creditCost={resumeAi.creditCost}
+        tasks={resumeAi.tasks}
+      >
+        <TextArea label={re.bullets} name={`researchExperience.${index}.bullets`} defaultValue={(item.bullets ?? []).join("\n")} rows={5} />
+      </ResumeAiAssistBubble>
+    </div>
+  );
+}
+
+export function ResearchExperienceEditor({ initialItems, resumeAi }: { initialItems: ResearchItem[]; resumeAi: ResumeAiAssistPack }) {
   const sh = useResumeFormShared();
   const ac = useAcademicEditorCopy();
   const re = ac.researchEditor;
@@ -79,7 +161,7 @@ export function ResearchExperienceEditor({ initialItems }: { initialItems: Resea
     <div className="grid gap-5">
       <input type="hidden" name="researchExperienceCount" value={items.length} />
       {items.map((item, index) => (
-        <div key={index} className="rounded-3xl border border-white/10 bg-white/5 p-4">
+        <div key={index} data-research-index={index} className="rounded-3xl border border-white/10 bg-white/5 p-4">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <p className="font-bold text-cyan-100">{interpolate(re.cardTitle, { n: index + 1 })}</p>
             <button
@@ -96,9 +178,7 @@ export function ResearchExperienceEditor({ initialItems }: { initialItems: Resea
             <Field label={re.titleRole} name={`researchExperience.${index}.title`} defaultValue={item.title} />
             <Field label={re.period} name={`researchExperience.${index}.period`} defaultValue={item.period} />
           </div>
-          <div className="mt-4">
-            <TextArea label={re.bullets} name={`researchExperience.${index}.bullets`} defaultValue={(item.bullets ?? []).join("\n")} rows={5} />
-          </div>
+          <ResearchBulletsWithAi index={index} item={item} resumeAi={resumeAi} />
         </div>
       ))}
       <button

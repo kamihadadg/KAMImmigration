@@ -43,12 +43,12 @@ export function AppShell({
   return (
     <main className="soft-grid min-h-screen p-4 md:p-8">
       <section className="mx-auto max-w-7xl">
-        <nav className="mb-8 flex flex-wrap items-center justify-between gap-4 rounded-full border border-white/10 bg-white/8 px-5 py-3 backdrop-blur">
+        <nav className="backlit-app-shell-nav mb-8 flex flex-wrap items-center justify-between gap-4 rounded-full border px-5 py-3">
           <a href="/" className="flex items-center gap-3">
             <div className="rounded-full bg-cyan-300 p-2 text-slate-950">
               <GraduationCap size={22} />
             </div>
-            <span className="text-lg font-black">KAM CLB9 Coach</span>
+            <span className="text-lg font-black text-[var(--app-body-text)]">KAM CLB9 Coach</span>
           </a>
           <div className="flex items-center gap-2 text-sm text-slate-300">
             <Server size={16} />
